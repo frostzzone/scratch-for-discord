@@ -47,6 +47,7 @@ export default async function register(self) {
                     title: self.$t("autosave.text")
                   })
                 console.log('loaded a save!')
+              console.log(localforage.getItem("save3"))
                 Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(xml), workspace);
             },})
         }
