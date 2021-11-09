@@ -24,7 +24,7 @@ const examples = {
     "command-parsing": CommandParsingExample,
     "leveling": LevelingExample,
     "music":MusicExample,
-    "frostlevel":FrostLevelExample
+    "frostlevel":FrostLevelExample,
     "ImageGenExample":ImageGenExample
 };
 
