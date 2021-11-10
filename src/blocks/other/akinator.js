@@ -2,6 +2,8 @@ import * as Blockly from "blockly/core";
 
 const blockName = "Akinator";
 
+const akinator = require("discord.js-akinator");
+
 const blockData = {
     "message0": "akinator%1",
     "args0": [
@@ -26,7 +28,7 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block){
     const message = Blockly.JavaScript.valueToCode(block, "MESSAGE", Blockly.JavaScript.ORDER_ATOMIC);
-    return `akinator(message, {
+    return `akinator(s4dmessage, {
         language: "en",
         childMode: false,
         gameType: "character",
