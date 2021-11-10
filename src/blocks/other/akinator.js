@@ -29,7 +29,7 @@ Blockly.JavaScript[blockName] = function(block){
     return `akinator(s4dmessage, {
         language: "en",
         childMode: false,
-        gameType: "${Message}",
+        gameType: "${message}",
         useButtons: true
 })`;
 };
