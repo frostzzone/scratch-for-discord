@@ -4,11 +4,11 @@ const blockName = "aki_start";
 
 const blockData = {
     "type": "block_type",
-    "message0": "%{BKY_LOGIN}",
+    "message0": "Start aki with type",
     "args0": [
         {
             "type": "input_value",
-            "name": "TOKEN",
+            "name": "TYPE",
             "check": "String"
         }
     ],
@@ -24,7 +24,7 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block) {
-    const value = Blockly.JavaScript.valueToCode(block, "TOKEN", Blockly.JavaScript.ORDER_ATOMIC);
-    const code = ``;
+    const type = Blockly.JavaScript.valueToCode(block, "TYPE", Blockly.JavaScript.ORDER_ATOMIC);
+    const code = `await aki.start(${type})`;
     return code;
 };
