@@ -3,7 +3,7 @@ import * as Blockly from "blockly/core";
 const blockName = "Akinator";
 
 const blockData = {
-    "message0": "Start a Akinator game with the game type(use var)%1",
+    "message0": "Start an Akinator game with the game type (use var)%1",
     "args0": [
         {
             "type": "input_value",
