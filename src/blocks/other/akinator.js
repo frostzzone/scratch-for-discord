@@ -3,7 +3,7 @@ import * as Blockly from "blockly/core";
 const blockName = "Akinator";
 
 const blockData = {
-    "message0": "akinator%1",
+    "message0": "Start a Akinator game with the game type(use var)%1",
     "args0": [
         {
             "type": "input_value",
@@ -29,7 +29,7 @@ Blockly.JavaScript[blockName] = function(block){
     return `akinator(s4dmessage, {
         language: "en",
         childMode: false,
-        gameType: "${message}",
+        gameType: ${message},
         useButtons: true
 })`;
 };
