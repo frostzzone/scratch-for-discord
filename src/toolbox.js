@@ -458,6 +458,7 @@ export default (Blockly,value) => {
                 <category name="discord together" colour="#00664d">
                     <block type="create_together"/>
                     <block type="invite_code"/>
+		    <block type="vc_channel"/>
                 </category>
                 <category name="cooldown" colour="#00664d">
                     <block type="set_member_cooldown"/>
