@@ -4,9 +4,9 @@
         <b-dropdown-item @click="load('command-parsing')">{{ $t('examples.command_parsing') }}</b-dropdown-item>
         <b-dropdown-item @click="load('leveling')">{{ $t('examples.leveling') }}</b-dropdown-item>
         <b-dropdown-item @click="load('music')">{{ $t('examples.music') }}</b-dropdown-item>
-        <b-dropdown-item @click="load('frostlevel')">{{ $t('examples.frostlevel') }}</b-dropdown-item>
-        <b-dropdown-item @click="load('image_gen')">{{ $t('examples.image_gen') }}</b-dropdown-item>
-    </b-nav-item-dropdown>
+        <b-dropdown-item @click="load('image-gen')">{{ $t('examples.image_gen') }}</b-dropdown-item>
+        <b-dropdown-item @click="load('economy')">{{ $t('examples.economy') }}</b-dropdown-item>
+      </b-nav-item-dropdown>
 </template>
 
 <script>
@@ -16,16 +16,16 @@ import PingPongExample from "../../examples/ping-pong";
 import CommandParsingExample from "../../examples/command-parsing";
 import LevelingExample from "../../examples/leveling";
 import MusicExample from "../../examples/music";
-import FrostLevelExample from "../../examples/frostlevel";
-import ImageGenExample from "../../examples/image_gen";
+import ImageGen from "../../examples/image_gen";
+import Economy from "../../examples/economy";
 
 const examples = {
     "ping-pong": PingPongExample,
     "command-parsing": CommandParsingExample,
     "leveling": LevelingExample,
     "music":MusicExample,
-    "frostlevel":FrostLevelExample,
-    "ImageGenExample":ImageGenExample
+    "image-gen": ImageGen,
+    "economy": Economy
 };
 
 export default {
