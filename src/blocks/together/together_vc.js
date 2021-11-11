@@ -1,14 +1,14 @@
-import * as Blockly from "blockly/core";
+import Blockly from "blockly/core";
 
 const blockName = "vc_channel";
 
 const blockData = {
-    "message0": "together voice channel",
+    "message0": "Together voice channel",
+    "args0": [
+    ],
+    "output": "VoiceChannel",
     "colour": "#40BF4A",
-		"args0": [
-		],
-    "tooltip": null,
-    "output": "String",
+    "tooltip": "",
     "helpUrl": ""
 };
 
@@ -19,6 +19,6 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function() {
-  const code = [`s4d.message.member.voice.channel.id`, Blockly.JavaScript.ORDER_NONE];
-  return code;
+    const code = ['s4dmessage.member.voice.channel.id', Blockly.JavaScript.ORDER_NONE ];
+    return code;
 };
