@@ -645,7 +645,6 @@ export default (Blockly,value) => {
             <block type="s4d_create_embed_then_set_color"></block>
             <block type="s4d_create_embed_then_set_author"></block>
             <block type="s4d_create_embed_then_set_title"></block>
-	    <block type="s4d_create_embed_then_set_url"></block>
             <block type="s4d_create_embed_then_set_thumbnail"></block>
             <label text="%{BKY_HYPERLINK_MESSAGE}"></label>
             <label text="%{BKY_HYPERLINK_MESSAGE_2}"></label>
