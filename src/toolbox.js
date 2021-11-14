@@ -1,8 +1,10 @@
-export default (Blockly,value) => {
+export default (Blockly, value) => {
     return (`
     <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-        
-	
+	<category name="Favorites" colour="#e0ca00" css-icon="customIcon fa fa-star">
+                        ${value === null ? "" : value.map(c=> `<block type="${c}"/>`)}
+    </category>
+    <sep class="bt"/>
 	<category name="{{ TOOLBOX_LOGIC }}" colour="#5b80a5">
             <block type="controls_if" />
             <block type="logic_compare">
@@ -166,7 +168,6 @@ export default (Blockly,value) => {
             <block type="text_join">
                 <mutation items="2" />
             </block>
-
             <block type="text_replace">
                 <value name="TEXT">
                     <shadow type="text">
@@ -226,7 +227,6 @@ export default (Blockly,value) => {
                     </shadow>
                 </value>
             </block>
-
             <block type="s4d_includes">
                 <value name="TEXT">
                     <shadow type="text">
@@ -239,7 +239,6 @@ export default (Blockly,value) => {
                     </shadow>
                 </value>
             </block>
-
             <block type="text_isEmpty">
                 <value name="VALUE">
                     <shadow type="text">
@@ -436,31 +435,111 @@ export default (Blockly,value) => {
             <block type="s4d_return"></block>
             <block type="s4d_string_to_number"></block>
         </category>
-	 <category name="Games" colour="#D14081">
-	 				<block type="Akinator"/>
-					<block type="s4d_snake"/>
-					</category>
-				<category name="Reddit" colour="#5b80a5">
-					 <block type="ran_red_post"/>
-					  <block type="post_Image"/>
-					   <block type="post_Title"/>
-					    <block type="post_Url"/>
-					  </category>
-                <sep class="bt"/>
-                    <category name="favorite" colour="#FFFF00" css-icon="customIcon fa fa-star">
-                        ${value === null ? "" : value.map(c=> `<block type="${c}"/>`)}
-                    </category>
-				<sep class="bt"/>
+	<sep class="bt" />
+    <category name="Events" colour="#00b3ff">
+            <category name="Member" colour="#00b3ff">
+                <label text="Boost"></label>
+                    <block type="on_boost"/>
+                    <block type="member_raw"/>
+                    <block type="member"/>
+                <label text="Unboost"></label>
+                    <block type="on_unboost"/>
+                    <block type="member_raw"/>
+                    <block type="member"/>
+                <label text="Role added"></label>
+                    <block type="on_roleadd"/>
+                    <block type="event-role"/>
+                    <block type="member_raw"/>
+                    <block type="member"/>
+                <label text="Role removed"></label>
+                    <block type="on_roleremove"/>
+                    <block type="event-role"/>
+                    <block type="member_raw"/>
+                    <block type="member"/>
+            </category>
+            <category name="Channel" colour="#00b3ff">
+                <label text="Permissions Update"></label>
+                    <block type="on_channelPermissionsChange"/>
+                    <block type="s4d_channel_raw"/>
+                    <block type="permissions"/>
+                <label text="Topics Update"></label>
+                    <block type="on_channelTopicChange"/>
+                    <block type="s4d_channel_raw"/>
+                    <block type="topic"/>
+            </category>
+            <category name="Guild" colour="#00b3ff">
+                <label text="Boost leveled up"></label>
+                    <block type="on_up"/>
+                    <block type="event-guild"/>
+                    <block type="boost"/>
+                    <label text="Boost leveled down"></label>
+                    <block type="on_down"/>
+                    <block type="event-guild"/>
+                    <block type="boost"/>
+                <label text="Banner added"></label>
+                    <block type="on_banner_add"/>
+                    <block type="event-guild"/>
+                    <block type="banner-url"/>
+                <label text="Vanity URL added"></label>
+                    <block type="on_vanity_add"/>
+                    <block type="event-guild"/>
+                    <block type="vanity-url"/>
+                <label text="Vanity URL removed"></label>
+                    <block type="on_vanity_remove"/>
+                    <block type="event-guild"/>
+                    <block type="vanity-url"/>
+                    <label text="Vanity URL updated"></label>
+                    <block type="on_vanity_update"/>
+                    <block type="event-guild"/>
+                    <block type="url-update"/>
+            </category>
+        </category>
+	<category name="Games" colour="#2bd979">
+            <block type="Akinator"/>
+            <block type="s4d_snake"/>
+            </category>
+        <category name="Social Media" colour="#ff6314">
+            <label text="YouTube"></label>
+                <block type="on_newvideo"/>
+                <block type="video_raw"/>
+                <block type="add_channel"/>
+            <label text="Reddit"></label>
+                <block type="ran_red_post"/>
+                <block type="post_Image"/>
+                <block type="post_Title"/>
+                <block type="post_Url"/>
+        </category>
+        <sep class="bt"/>
+
+    
+        
+          
+    
+
+        
+    
+    @@ -457,7 +458,7 @@ export default (Blockly,value) => {
+  
 				
 				
 				
 	  			
 				
 				<category name="{{ JOSE }}" colour="#00664d">
-                <category name="date" colour="#00664d">
+                <category name="Date" colour="#00664d">
                     <block type="s4d_current"></block>
                     <block type="unix_to_date"/>
                     <block type="date_to_unix"/>
+
+    
+          
+            
+    
+
+          
+    
+    
+  
                     <block type="get_in_date"/>
 		    
                 </category>
@@ -515,81 +594,6 @@ export default (Blockly,value) => {
                     <block type="load_gif"/>
                     <block type="load_image"/>
                     <block type="send_on_channel"/>
-                </category>
-                <category name="Events" colour="#00b3ff">
-                    <category name="channel" colour="#00b3ff">
-                        <category name="channel permissions update" colour="#00b3ff">
-                            <block type="on_channelPermissionsChange"/>
-                            <block type="s4d_channel_raw"/>
-                            <block type="permissions"/>
-                        </category>
-                        <category name="channel topic update" colour="#00b3ff">
-                            <block type="on_channelTopicChange"/>
-                            <block type="s4d_channel_raw"/>
-                            <block type="topic"/>
-                        </category>
-                    </category>
-                    <category name="member" colour="#00b3ff">
-                        <category name="member boost" colour="#00b3ff">
-                            <block type="on_boost"/>
-                            <block type="member_raw"/>
-                            <block type="member"/>
-                        </category>
-                        <category name="member unboost" colour="#00b3ff">
-                            <block type="on_unboost"/>
-                            <block type="member_raw"/>
-                            <block type="member"/>
-                        </category>
-                        <category name="member role add" colour="#00b3ff">
-                            <block type="on_roleadd"/>
-                            <block type="event-role"/>
-                            <block type="member_raw"/>
-                            <block type="member"/>
-                        </category>
-                        <category name="member role remove" colour="#00b3ff">
-                            <block type="on_roleremove"/>
-                            <block type="event-role"/>
-                            <block type="member_raw"/>
-                            <block type="member"/>
-                        </category>
-                    </category>
-                    <category name="guild" colour="#00b3ff">
-                        <category name="guild boost level up" colour="#00b3ff">
-                            <block type="on_up"/>
-                            <block type="event-guild"/>
-                            <block type="boost"/>
-                        </category>
-                        <category name="guild boost level down" colour="#00b3ff">
-                            <block type="on_down"/>
-                            <block type="event-guild"/>
-                            <block type="boost"/>
-                        </category>
-                        <category name="guild banner add" colour="#00b3ff">
-                            <block type="on_banner_add"/>
-                            <block type="event-guild"/>
-                            <block type="banner-url"/>
-                        </category>
-                        <category name="guild vanity url add" colour="#00b3ff">
-                            <block type="on_vanity_add"/>
-                            <block type="event-guild"/>
-                            <block type="vanity-url"/>
-                        </category>
-                        <category name="guild vanity url remove" colour="#00b3ff">
-                            <block type="on_vanity_remove"/>
-                            <block type="event-guild"/>
-                            <block type="vanity-url"/>
-                        </category>
-                        <category name="guild vanity url update" colour="#00b3ff">
-                            <block type="on_vanity_update"/>
-                            <block type="event-guild"/>
-                            <block type="url-update"/>
-                        </category>
-                    </category>
-                </category>
-                <category name="YoutubeNotifier" colour="#00664d">
-                    <block type="video_raw"/>
-                    <block type="on_newvideo"/>
-                    <block type="add_channel"/>
                 </category>
                 <category name="{{ DISCORDBACKUP }}" colour="#00664d">
                     <block type="s4d_create_backup_of_guild_then"/>
@@ -1204,7 +1208,6 @@ export default (Blockly,value) => {
                     </shadow>
                 </value> 
             </block>
-
             <label text="%{BKY_CHANNEL_ACTIONS}"></label>
             <block type="s4d_is_channel_nsfw"/>
             <block type="slowmode"></block>
@@ -1250,7 +1253,6 @@ export default (Blockly,value) => {
             <block type="s4d_ban_member"></block>
             <block type="s4d_unban_member"></block>
             <block type="s4d_send_member"></block>
-
             <block type="s4d_set_member_nickname"></block>
             <label text="%{BKY_FORMS}"></label>
             <block type="s4d_send_wait_reply_dm"></block>
