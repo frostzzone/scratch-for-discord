@@ -417,13 +417,6 @@ export default (Blockly,value) => {
         <sep class="bt" />
         <category name="{{ TOOLBOX_VARIABLES }}" colour="#a55b80" custom="VARIABLE" />
         <category name="{{ TOOLBOX_FUNCTIONS }}" colour="#995ba5" custom="PROCEDURE" />
-	<category name="Ticketing System" colour="#5b80a5">
-		<block type="ticket_connect"/>
-		<block type="archieve_ticket"/>
-		<block type="close_ticket"/>
-		<block type="ticket_setup"/>
-		<block type="unarchieve_ticket"/>
-        </category>
         <category name="{{ TOOLBOX_OTHER }}" colour="#D14081"> 
         
             <block type="anti_link"/>
@@ -443,6 +436,14 @@ export default (Blockly,value) => {
             <block type="s4d_return"></block>
             <block type="s4d_string_to_number"></block>
         </category>
+	<category name="Ticketing System" colour="#5b80a5">
+		<block type="ticket_connect"/>
+		<block type="archieve_ticket"/>
+		<block type="close_ticket"/>
+		<block type="ticket_setup"/>
+		<block type="unarchieve_ticket"/>
+        </category>
+	<category name="XL83 & Retro" colour="#00664d">
 	 <category name="Games" colour="#D14081">
 	 				<block type="Akinator"/>
 					<block type="s4d_snake"/>
@@ -453,6 +454,7 @@ export default (Blockly,value) => {
 					   <block type="post_Title"/>
 					    <block type="post_Url"/>
 					  </category>
+	</category>
                 <sep class="bt"/>
                     <category name="favorite" colour="#FFFF00" css-icon="customIcon fa fa-star">
                         ${value === null ? "" : value.map(c=> `<block type="${c}"/>`)}
