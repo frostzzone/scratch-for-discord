@@ -435,14 +435,7 @@ export default (Blockly,value) => {
             <block type="s4d_try_and_catch"></block>
             <block type="s4d_return"></block>
             <block type="s4d_string_to_number"></block>
-        </category>
-	<category name="Ticketing System" colour="#5b80a5">
-		<block type="ticket_connect"/>
-		<block type="archieve_ticket"/>
-		<block type="close_ticket"/>
-		<block type="ticket_setup"/>
-		<block type="unarchieve_ticket"/>
-        </category>
+        </category
 	<category name="XL83 & Retro" colour="#00664d">
 	 <category name="Games" colour="#D14081">
 	 				<block type="Akinator"/>
@@ -454,6 +447,13 @@ export default (Blockly,value) => {
 					   <block type="post_Title"/>
 					    <block type="post_Url"/>
 					  </category>
+		<category name="Ticketing System" colour="#5b80a5">
+		<block type="ticket_connect"/>
+		<block type="archieve_ticket"/>
+		<block type="close_ticket"/>
+		<block type="ticket_setup"/>
+		<block type="unarchieve_ticket"/>
+        	</category>
 	</category>
                 <sep class="bt"/>
                     <category name="favorite" colour="#FFFF00" css-icon="customIcon fa fa-star">
