@@ -463,7 +463,7 @@ export default (Blockly,value) => {
         </category>
 	<category name="lyric finder" colour="#5ba58b">
 	 	<block type="find_lyric_than"/>
-		<block type="invite_code"/>
+		<block type="lyric"/>
 	</category>
 </category>
                 <sep class="bt"/>
