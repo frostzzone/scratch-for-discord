@@ -108,7 +108,7 @@ import "./blocks/events/sticker/stickerDelete/";
 import "./blocks/games/"
 import "./blocks/reddit/"
 import "./blocks/ticket_system/"
-import "./blocks/lyric_finder/"
+import "./blocks/Lyric_finder/"
 
 import Theme from '@blockly/theme-modern';
 
