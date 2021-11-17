@@ -3,7 +3,7 @@ import * as Blockly from "blockly/core";
 const blockName = "find_lyric_than";
 
 const blockData = {
-    "message0": "Get lyric than",
+    "message0": "Get lyric With the artist name %1 song name %2 than %3",
     "args0": [
         {
             "type": "input_value",
