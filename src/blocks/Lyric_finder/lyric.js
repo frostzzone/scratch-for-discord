@@ -1,6 +1,6 @@
 import * as Blockly from "blockly/core";
 
-const blockName = "invite_code";
+const blockName = "lyric";
 
 const blockData = {
     "message0": "Lyric",
