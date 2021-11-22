@@ -1,7 +1,7 @@
 //line 455 add < at start and > at end
 export default (Blockly, value) => {
   return (`
-        
+         <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
 	
 	<category name="{{ TOOLBOX_LOGIC }}" colour="#5b80a5">
             <block type="controls_if" />
