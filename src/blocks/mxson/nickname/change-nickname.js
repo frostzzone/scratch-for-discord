@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_change_nickname";
 
 const blockData = {
-    "message0": "change nickname of %1 to %2",
+    "message0": "change nickname of %1 to %2 %3",
     "args0": [
         {
             "type": "input_value",
@@ -15,6 +15,10 @@ const blockData = {
             "type": "input_value",
             "name": "STRING",
             "check": "String"
+        },
+        {
+            "type": "input_statement",
+            "name": "STATEMENTS"
         }
     ],
     "colour": "#33FF74",
