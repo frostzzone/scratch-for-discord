@@ -495,6 +495,7 @@ export default (Blockly, value) => {
 	<category name="Nickname" colour="#33D7FF">
   		<label text="Nickname Events" web-class="boldtext"></label>
 	 		<block type="s4d_on_nickname_changed"/>
+			<block type="s4d_change_nickname"/>
 	</category>
 </category>
 				
