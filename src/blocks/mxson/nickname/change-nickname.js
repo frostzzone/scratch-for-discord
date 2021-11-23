@@ -1,7 +1,7 @@
 import * as Blockly from "blockly/core";
 import { registerRestrictions } from "../../../restrictions";
 
-const blockName = "s4d_change_nickname";
+const blockName = "mxs_change_nickname";
 
 const blockData = {
     "message0": "change nickname of %1 to %2",
