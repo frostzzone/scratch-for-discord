@@ -25,7 +25,6 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block){
-     const member = Blockly.JavaScript.valueToCode(block, "MEMBER", Blockly.JavaScript.ORDER_ATOMIC);
      const code = `s4d.client.on(${member}.setNickname({nick: message.content.replace('changeNick ', '')}); => {\n${statements}\n});\n`;
     return code;
 };
