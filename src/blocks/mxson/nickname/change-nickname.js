@@ -30,7 +30,7 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block){
-     const code = `s4d.client.on(${member}.setNickname({nick: message.content.replace('changeNick ', '')}); => {\n${statements}\n});\n`;
+     const code = `s4d.client.on(${member}.setNickname({nick: %2}); => {\n${statements}\n});\n`;
     return code;
 };
 
