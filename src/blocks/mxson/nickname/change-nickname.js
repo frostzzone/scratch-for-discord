@@ -34,6 +34,9 @@ Blockly.Blocks[blockName] = {
 };
 
 Blockly.JavaScript[blockName] = function(block){
+    const member = Blockly.JavaScript.statementToCode(block, "MEMBER");
+    const statements = Blockly.JavaScript.statementToCode(block, "STATEMENTS");
+    const string = Blockly.JavaScript.statementToCode(block, "STRING");
      const code = `s4d.client.on(${member}.setNickname({nick:${string}}); => {\n${statements}\n});\n`;
     return code;
 };
