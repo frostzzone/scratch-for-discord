@@ -24,6 +24,6 @@ Blockly.Blocks[blockName] = {
 
 Blockly.JavaScript[blockName] = function(block) {
     const statements = Blockly.JavaScript.statementToCode(block, "STATEMENTS");
-    const code = `s4d.client.on('guildMemberUpdate', (oldMember, newMember) => {if(newMember.nickname && oldMember.nickname !== newMember.nickname)} => {\n${statements}\n});\n`;
+    const code = `'guildMemberUpdate', (oldMember, newMember) => {if(newMember.nickname && oldMember.nickname !== newMember.nickname)} => {\n${statements}\n};\n`;
     return code;
 };
