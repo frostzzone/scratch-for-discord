@@ -3,7 +3,7 @@ import * as Blockly from "blockly/core";
 const blockName = "s4d_change_nickname";
 
 const blockData = {
-    "message0": "change nickname of %1 to %2",
+    "message0": "change nickname of %1 to %2 %3",
     "args0": [
         {
             "type": "input_value",
@@ -14,6 +14,10 @@ const blockData = {
             "type": "input_value",
             "name": "STRING",
             "check": "String"
+        },
+        {
+            "type": "input_statement",
+            "name": "BLOCK"
         }
     ],
     "colour": "#33FF74",
@@ -30,6 +34,6 @@ Blockly.Blocks[blockName] = {
 Blockly.JavaScript[blockName] = function(block){
     const member = Blockly.JavaScript.statementToCode(block, "MEMBER");
     const string = Blockly.JavaScript.statementToCode(block, "STRING");
-     const code = `${member}.setNickname({nick:${string}});\n`;
+     const code = `${member}.setNickname({nick:${string}}) => {\n${statements}\n};\n`;
     return code;
 };
