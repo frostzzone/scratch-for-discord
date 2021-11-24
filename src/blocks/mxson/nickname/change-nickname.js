@@ -34,6 +34,7 @@ Blockly.Blocks[blockName] = {
 Blockly.JavaScript[blockName] = function(block){
     const member = Blockly.JavaScript.statementToCode(block, "MEMBER");
     const string = Blockly.JavaScript.statementToCode(block, "STRING");
+    const statements = Blockly.JavaScript.statementToCode(block, "BLOCK");
      const code = `${member}.setNickname({nick:${string}}) => {\n${statements}\n};\n`;
     return code;
 };
