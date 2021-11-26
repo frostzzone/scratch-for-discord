@@ -1077,6 +1077,13 @@ export default (Blockly, value) => {
             <label text="%{BKY_BASE_BLOCKS}"></label>
             <block type="s4d_on_connected"></block>
             <label text="%{BKY_BOT_INFORMATIONS}"></label>
+<block type="frost_webserver">
+<value name="URL">
+                    <shadow type="text">
+                        <field name="TEXT">This site was created to keep bot on 25/8</field>
+                    </shadow>
+                </value>
+</block>
             <block type="s4d_bot_ping"></block>
             <block type="s4d_bot_server_count"></block>
             <block type="s4d_get_bot"></block>
