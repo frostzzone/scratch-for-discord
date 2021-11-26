@@ -1069,12 +1069,19 @@ export default (Blockly, value) => {
         <label text="%{BKY_MANDATORY_BLOCKS}" web-class="boldtext"></label>
             <block type="s4d_login">
                 <value name="TOKEN">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">Your bot token</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
             <label text="%{BKY_BASE_BLOCKS}"></label>
+<block type="frost_env">
+<value name="VALUE">
+                    <shadow type="text">
+                        <field name="TEXT">token</field>
+                    </shadow>
+                </value>
+            </block>
             <block type="s4d_on_connected"></block>
             <label text="%{BKY_BOT_INFORMATIONS}"></label>
 <block type="frost_webserver">
