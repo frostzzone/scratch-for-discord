@@ -96,6 +96,7 @@ export default {
                     const javascriptContent = this.getWorkspaceCode();
                     zip.file("bot.js", javascriptContent);
                     zip.file(".replit", 'run = "npm start"');
+                  zip.file("db.json",await localStorage.getItem('easyjsondatabase'));
                     zip.file("package.json", `{\n
                         "name": "scratch-for-discord-bot",\n
                         "version": "1.0.0",\n
@@ -106,13 +107,13 @@ export default {
                             "node-clean": "rm -rf node_modules && rm package-lock.json && npm cache clear --force && npm cache clean --force && npm i"\n
                         },\n
                         "dependencies": {\n
-                            ${requires.join("\n")}\n
-                            "djs-games": "^2.1.10",\n
+                             "djs-games": "^2.1.10",\n
                             "lyrics-finder": "^21.7.0",\n
                             "@discordjs/opus": "^0.7.0",\n
                             "discord-music-player": "^8.3.1",\n
                             "discord.js": "^13.3.1",\n
-                            "ffmpeg-static": "^4.4.0"\n
+                            "ffmpeg-static": "^4.4.0",\n
+                            ${requires.join("\n")}\n
                         },\n
                         "devDependencies": {\n
                             "node": "^16.10.0"\n
