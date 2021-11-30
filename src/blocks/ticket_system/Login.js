@@ -3,21 +3,22 @@ import * as Blockly from "blockly/core";
 const blockName = "ticket_connect";
 
 const blockData = {
-    "type": "block_type",
     "message0": "Login to mongo with the URL %1",
     "args0": [
         {
             "type": "input_value",
             "name": "URL",
-            "check": "String"
+            "check": [ "String" ]
         },
         {
             "type": "input_value",
             "name": "BOOLEAN",
-            "check": "BOOLEAN"
-        }
+            "check": [ "Boolean" ]
+        },
     ],
-    "colour": "#F46580",
+    "colour": "#4C97FF",
+    "previousStatement": null,
+    "nextStatement": null,
     "tooltip": "",
     "helpUrl": ""
 };
