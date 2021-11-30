@@ -50,6 +50,9 @@ import "./blocks/discord/bot-event-2/";
 import "./blocks/date/";
 import "./blocks/regex/";
 import "./blocks/list/";
+import "./blocks/firebase/";
+import  "./blocks/discord/voice-channel/";
+  
 //my events
 //channel
 import "./blocks/logs-events/channel/channel-permissions-update/";
@@ -104,6 +107,17 @@ import "./blocks/events/role/roleDelete/";
 import "./blocks/events/sticker/stickerCreate/";
 import "./blocks/events/sticker/stickerUpdate/";
 import "./blocks/events/sticker/stickerDelete/";
+//469 stuff
+import "./blocks/games/"
+import "./blocks/reddit/"
+import "./blocks/p-s_stats/"
+import "./blocks/ticket_system/"
+import "./blocks/Lyric_finder/"
+import "./blocks/frostzzone/useless/"
+import "./blocks/frostzzone/useful/"
+import "./blocks/frostzzone/scratch/"
+import "./blocks/frostzzone/github/"
+import "./blocks/better_music/"
 
 import Theme from '@blockly/theme-modern';
 

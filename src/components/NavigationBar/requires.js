@@ -16,7 +16,7 @@ oldarray.forEach(js=>{
         array.push(`"discord-giveaways": "^5.0.1",`)
     }
     if(js.includes("ms")){
-        array.push(`"ms":"^2.1.3"`)
+        array.push(`"ms":"^2.1.3",`)
     }
     if(js.includes("discord-logs")){
         array.push(`"discord-logs": "^2.0.1",`)
@@ -48,5 +48,11 @@ oldarray.forEach(js=>{
     if(js.includes("regex")){
         array.push(`"regex":"^0.1.1",`)
     }
+    if(js.includes("firebase")){
+        array.push(`"firebase":"^9.5.0",`)
+    }
 })
+array.reverse()
+array[0] = array[0].replace(",","")
+array.reverse()
 }

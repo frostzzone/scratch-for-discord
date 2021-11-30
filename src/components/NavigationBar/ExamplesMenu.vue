@@ -3,9 +3,15 @@
         <b-dropdown-item @click="load('ping-pong')">{{ $t('examples.ping_pong') }}</b-dropdown-item>
         <b-dropdown-item @click="load('command-parsing')">{{ $t('examples.command_parsing') }}</b-dropdown-item>
         <b-dropdown-item @click="load('leveling')">{{ $t('examples.leveling') }}</b-dropdown-item>
+      <b-dropdown-item @click="load('aki')">{{ $t('examples.aki') }}</b-dropdown-item>
         <b-dropdown-item @click="load('music')">{{ $t('examples.music') }}</b-dropdown-item>
         <b-dropdown-item @click="load('image-gen')">{{ $t('examples.image_gen') }}</b-dropdown-item>
         <b-dropdown-item @click="load('economy')">{{ $t('examples.economy') }}</b-dropdown-item>
+      <b-dropdown-item @click="load('backup')">{{ $t('examples.backup') }}</b-dropdown-item>
+      <b-dropdown-item @click="load('random')">{{ $t('examples.random') }}</b-dropdown-item>
+      <b-dropdown-item @click="load('ticket')">{{ $t('examples.ticket') }}</b-dropdown-item>
+      <b-dropdown-item @click="load('reddit')">{{ $t('examples.reddit') }}</b-dropdown-item>
+      
       </b-nav-item-dropdown>
 </template>
 
@@ -18,6 +24,11 @@ import LevelingExample from "../../examples/leveling";
 import MusicExample from "../../examples/music";
 import ImageGen from "../../examples/image_gen";
 import Economy from "../../examples/economy";
+import backup from "../../examples/backup";
+import random from "../../examples/random";
+  import aki from "../../examples/aki";
+  import reddit from "../../examples/reddit";
+  import ticket from "../../examples/ticket"
 
 const examples = {
     "ping-pong": PingPongExample,
@@ -25,7 +36,12 @@ const examples = {
     "leveling": LevelingExample,
     "music":MusicExample,
     "image-gen": ImageGen,
-    "economy": Economy
+    "economy": Economy,
+  "backup": backup,
+  "random": random,
+  "aki": aki,
+  "reddit": reddit,
+  "ticket": ticket
 };
 
 export default {
@@ -51,7 +67,7 @@ export default {
                 },
                 closeOnClickOutside: false
             }).then(result => {
-                if(typeof result === "object"){
+                if(typeof result == "object"){
                     return;
                 } else if (result) {
                     this.$store.state.workspace.getAllBlocks().forEach((block) => block.dispose());

@@ -1,10 +1,17 @@
 export default async function require(array,code,js) {
+    array.push(`let { Player, RepeatMode } = require("discord-music-player");`)
+    code.push(`const player = new Player(s4d.client, { leaveOnEmpty: false, });`)
+    code.push(`s4d.client.player = player;`)
 if(js.includes("moment")){
     array.push(`let moment  = require("moment")`)
 }
 if(js.includes("backup")){
     array.push(`const backup = require("discord-backup");`)
 }
+if(js.includes("akinator")){
+    array.push(`const akinator = require("discord.js-akinator");`)
+}
+array.push(`const lyricsFinder = require('lyrics-finder');`)
 if(js.includes("s4d.Inviter")){
     array.push(`let Invite = require("discord-inviter-tracker")`)
     code.push("s4d.Inviter = new Invite(s4d.client)")
@@ -14,6 +21,10 @@ if(js.includes("s4d.Inviter")){
 }
 if(js.includes("URL")){
     array.push(`let URL = require('url')`)
+}
+if(js.includes("ticket")){
+    array.push(`const ticket = require('tickets-discord');`)
+    array.push(`const { start, login } = require('tickets-discord');`)
 }
 if(js.includes(`ms`)){
     array.push(`const ms = require("ms")`)
@@ -31,8 +42,15 @@ if(js.includes("antilink")){
 if(js.includes("DIG")){
     array.push(`let DIG = require("discord-image-generation")`)
 }
+  if(js.includes("firebase")){
+    array.push(`let firebase = require("firebase")`)
+}
 if(js.includes("DB")){
     array.push(`let { DB } = require("quickmongo");`)
+}
+ if(js.includes("tictactoe")){
+    array.push(`const TicTacToe = require('discord-tictactoe');`)
+    array.push(`const game = new TicTacToe({ language: 'en' })`)
 }
 if(js.includes("canvas")){
     array.push(`let canvas = require("discord-canvas") `)
@@ -77,6 +95,9 @@ if(js.includes("getBadges")){
 if(js.includes("s4d.client.discordTogether")){
     array.push(`const { DiscordTogether } = require('discord-together');`)
     code.push(`s4d.client.discordTogether = new DiscordTogether(s4d.client);`)
+}
+ if(js.includes("SnakeGame")){
+    array.push(`const SnakeGame = require('snakecord')`)
 }
 if(js.includes("Cooldown")){
     code.push(`let Cooldown = ""
