@@ -15,12 +15,7 @@ const blockData = {
             "name": "BOOLEAN",
             "check": [ "Boolean" ]
         },
-    ],
-    "colour": "#4C97FF",
-    "previousStatement": null,
-    "nextStatement": null,
-    "tooltip": "",
-    "helpUrl": ""
+    ]
 };
 
 Blockly.Blocks[blockName] = {
