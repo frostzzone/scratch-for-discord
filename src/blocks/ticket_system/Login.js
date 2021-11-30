@@ -18,7 +18,7 @@ const blockData = {
         }
     ],
     "colour": "#F46580",
-    "tooltip": "%{BKY_LOGIN_TOOLTIP}",
+    "tooltip": "",
     "helpUrl": ""
 };
 
