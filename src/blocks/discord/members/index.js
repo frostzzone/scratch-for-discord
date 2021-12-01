@@ -19,5 +19,5 @@ import "./member_created_data";
 import "./unban_member";
 import "./member_exist";
 import "./member_nickname";
-import "./all_member"
-import "./random_m"
+import "./all_member";
+import "./random_m";
