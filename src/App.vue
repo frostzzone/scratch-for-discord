@@ -213,7 +213,7 @@ export default {
         font-family: "Oswald", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: #ff0000;
 }
  
 #blocklySpace {
