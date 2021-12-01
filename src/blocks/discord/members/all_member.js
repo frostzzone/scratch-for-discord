@@ -30,9 +30,8 @@ Blockly.Blocks[blockName] = {
     }
 };
 
-Blockly.JavaScript[blockName] = function() {
+Blockly.JavaScript[blockName] = function(block) {
     const server = Blockly.JavaScript.valueToCode(block, "SERVER", Blockly.JavaScript.ORDER_ATOMIC);
-    const statementThen = Blockly.JavaScript.statementToCode(block, "THEN");
-    const code = `members = await message.guild.members.fetch();\nrandMember = members.random();`;
+    const code = `members = await ${server}.members.fetch();\nrandMember = members.random();`;
     return code;
 };
