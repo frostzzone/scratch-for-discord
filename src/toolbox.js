@@ -438,8 +438,7 @@ export default (Blockly, value) => {
             <block type="s4d_return"></block>
             <block type="s4d_string_to_number"></block>
         </category>
-
-<sep class="bt"/>
+        <sep class="bt"/>
         <category name="ahq" colour="#ff0000">
         
         <category name="member" colour="#006600">
@@ -449,6 +448,7 @@ export default (Blockly, value) => {
         <block type="s4d_get_rndmber"/>
         </category>
         </category>
+
 
 <category name="frostzzone" colour="#347dfa">
 
