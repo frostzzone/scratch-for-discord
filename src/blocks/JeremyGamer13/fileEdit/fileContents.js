@@ -12,7 +12,7 @@ const blockData = {
         }
     ],
     "output": "String",
-    "colour": "#FFCC00",
+    "colour": "#a69000",
     "tooltip": "Get the contents of a file with the matching file name and extension.",
     "helpUrl": ""
 };
