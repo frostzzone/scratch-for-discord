@@ -31,7 +31,7 @@ const blockData = {
             ],
         },
     ],
-    "colour": "#FFCC00",
+    "colour": "#a69000",
     "previousStatement": null,
     "nextStatement": null,
     "tooltip": "The file name and content for a file. Be careful with this though, this saves as an actual file on your bot!",
