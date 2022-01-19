@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_reaction";
 
 const blockData = {
-    "message0": "%{BKY_THREAD_REACTION}",
+    "message0": "add reaction %1 on thread message",
     "args0": [
         {
             "type": "input_value",
