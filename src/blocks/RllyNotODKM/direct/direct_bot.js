@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_direct_bot";
 
 const blockData = {
-    "message0": "%{BKY_DIRECT_BOT}",
+    "message0": "direct author is a bot?",
     "colour": "#5B80A5",
     "tooltip": "",
     "output": "Boolean",
