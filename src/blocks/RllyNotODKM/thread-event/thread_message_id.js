@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_message_id";
 
 const blockData = {
-    "message0": "%{BKY_THREAD_MESSAGE_ID}",
+    "message0": "thread message ID",
     "colour": "#5BA58C",
     "tooltip": "",
     "output": "String",
