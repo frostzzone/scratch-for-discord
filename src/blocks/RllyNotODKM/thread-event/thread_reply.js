@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_reply";
 
 const blockData = {
-    "message0": "%{BKY_THREAD_REPLY}",
+    "message0": "thread reply %1 embed %2 mention %3",
     "args0": [
         {
             "type": "input_value",
