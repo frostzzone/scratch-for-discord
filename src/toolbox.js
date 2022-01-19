@@ -658,21 +658,21 @@ export default (Blockly, value) => {
 
 <category name="RllyNotODKM" colour="f63e02">
        <category name="DM Blocks" colour="#00BBE6">
-            <label text="%{BKY_MESSAGE_RELATED_BLOCKS}" web-class="boldtext"></label>
+            <label text="Blocks related to messages" web-class="boldtext"></label>
             <block type="s4d_send_member"></block>
-            <label text="{{ DETECT_MESSAGES }}"></label>
+            <label text="Detect messages"></label>
             <block type="s4d_on_direct"></block>
-            <label text="{{ MESSAGE_INFORMATIONS }}"></label>
+            <label text="Informations about the message"></label>
             <block type="s4d_direct_content"></block>
             <block type="s4d_direct_id"></block>
-            <label text="{{ DIRECT_AUTHOR_INFO }}"></label>
+            <label text="Information about the direct message author"></label>
             <block type="s4d_direct_author_raw"></block>
             <block type="s4d_direct_bot"></block>
-            <label text="{{ MESSAGE_ACTIONS }}"></label>
+            <label text="Actions on the message"></label>
             <block type="s4d_direct_reply">
                 <value name="CONTENT">
                     <shadow type="text">
-                        <field name="TEXT">{{ REPLY_EXAMPLE }}</field>
+                        <field name="TEXT">Hey!</field>
                     </shadow>
                 </value>
                 <value name="MENTION">
@@ -691,27 +691,27 @@ export default (Blockly, value) => {
             <block type="s4d_direct_delete"></block>
         </category>
 	       <category name="Threads" colour="#AA97D8">
-            <label text="%{BKY_LABEL_THREAD_MESSAGE}"/>
+            <label text="Thread messages"/>
             <block type="s4d_on_thread_message"/>
             <block type="s4d_send_thread"/>
-            <label text="{{ MESSAGE_INFORMATIONS }}"/>
+            <label text="Information about the message"/>
             <block type="s4d_thread_message_content"/>
             <block type="s4d_thread_message_id"/>
             <block type="s4d_thread_message_author"/>
-            <label text="%{BKY_LABEL_MESSAGE_CONTEXT}"/>
+            <label text="Message context"/>
             <block type="s4d_message_thread"/>
             <block type="s4d_server_thread"/>
-            <label text="%{BKY_RELATED_TO_MESSAGE_STRINGS}"/>
+            <label text="Strings related to the message"/>
             <block type="s4d_thread_message_author_raw"/>
             <block type="s4d_thread_raw"/>
             <block type="s4d_thread_guild_raw"/>
-            <label text="%{BKY_MESSAGE_ACTIONS}"/>
+            <label text="Actions on the message"/>
             <block type="s4d_start_thread"/>
             <block type="s4d_started_thread"/>
             <block type="s4d_thread_reply">
                 <value name="CONTENT">
                     <shadow type="text">
-                        <field name="TEXT">{{ REPLY_EXAMPLE }}</field>
+                        <field name="TEXT">Hey!</field>
                     </shadow>
                 </value>
                 <value name="MENTION">
@@ -728,17 +728,17 @@ export default (Blockly, value) => {
                 </value>
             </block>
             <block type="s4d_thread_message_delete"/>
-            <label text="%{BKY_LABEL_THREAD_ARCHIVE}"/>
+            <label text="Thread archive"/>
             <block type="s4d_on_thread_archive"/>
             <block type="s4d_on_thread_unarchive"/>
             <block type="s4d_unarchived_thread"/>
-            <label text="%{BKY_THREAD_CREATE_LABEL}"/>
+            <label text="Thread create"/>
             <block type="s4d_on_thread_create"/>
             <block type="s4d_created_thread_on"/>
-            <label text="%{BKY_THREAD_DELETE_LABEL}"/>
+            <label text="Thread deleted"/>
             <block type="s4d_on_thread_delete"/>
             <block type="s4d_deleted_thread"/>
-            <label text="%{BKY_THREAD_OTHER_LABEL}"/>
+            <label text="Other thread stuff"/>
             <block type="s4d_thread_channel"/>
             <block type="s4d_thread_name"/>
             <block type="s4d_thread_server"/>
