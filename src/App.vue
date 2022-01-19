@@ -128,6 +128,7 @@ import "./blocks/temp_channels"
 // 470 blocks
 import "./blocks/RllyNotODKM";
 import "./blocks/RllyNotODKM/Direct";
+import "./blocks/RllyNotODKM/thread-event";
 
 import Theme from '@blockly/theme-modern';
 
