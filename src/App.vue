@@ -125,6 +125,9 @@ import "./blocks/better_music/"
 //its me retro :v
 import "./blocks/weky/"
 import "./blocks/temp_channels"
+// 470 blocks
+import "./blocks/RllyNotODKM";
+import "./blocks/RllyNotODKM/Direct";
 
 import Theme from '@blockly/theme-modern';
 
