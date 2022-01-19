@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_channel";
 
 const blockData = {
-    "message0": "%{BKY_CHANNEL_OF_THREAD}",
+    "message0": "channel of thread %1",
     "args0": [
         {
             "type": "input_value",
