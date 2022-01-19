@@ -3,7 +3,7 @@ import * as Blockly from "blockly";
 const blockName = "s4d_on_thread_unarchive";
 
 const blockData = {
-    "message0": "%{BKY_ON_THREAD_UNARCHIVE} %1 %2",
+    "message0": "When thread is unarchived %1 %2",
     "colour": "#F5AB1A",
     "args0": [
         {
