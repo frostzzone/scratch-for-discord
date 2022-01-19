@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_start_thread";
 
 const blockData = {
-    "message0": "%{BKY_CREATE_THREAD}",
+    "message0": "start thread in channel %1 with name %2 archive after %3 %7then%5%4if not enough server boost level%8%6",
     "args0": [
         {
             "type": "input_value",
