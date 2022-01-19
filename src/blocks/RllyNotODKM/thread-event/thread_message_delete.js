@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_message_delete";
 
 const blockData = {
-    "message0": "%{BKY_DELETE_THREAD_MESSAGE}",
+    "message0": "delete thread message",
     "colour": "#4C97FF",
     "previousStatement": null,
     "nextStatement": null,
