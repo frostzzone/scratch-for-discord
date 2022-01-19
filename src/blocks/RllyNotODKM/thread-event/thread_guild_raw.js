@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_guild_raw";
 
 const blockData = {
-    "message0": "%{BKY_THREAD_GUILD_RAW}",
+    "message0": "%1 of the thread message server",
     "args0": [
         {
             "type": "field_dropdown",
