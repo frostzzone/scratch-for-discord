@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_archive";
 
 const blockData = {
-    "message0": "%{BKY_THREAD_ARCHIVE}",
+    "message0": "%1 thread %2",
     "args0": [
         {
             "type": "field_dropdown",
