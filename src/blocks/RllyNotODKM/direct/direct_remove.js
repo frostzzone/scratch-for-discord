@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_direct_delete";
 
 const blockData = {
-    "message0": "%{BKY_DELETE_DIRECT}",
+    "message0": "delete direct message",
     "colour": "#4C97FF",
     "previousStatement": null,
     "nextStatement": null,
