@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_message_author";
 
 const blockData = {
-    "message0": "%{BKY_THREAD_MESSAGE_AUTHOR}",
+    "message0": "thread message author",
     "colour": "#187795",
     "output": "Member",
     "tooltip": "",
