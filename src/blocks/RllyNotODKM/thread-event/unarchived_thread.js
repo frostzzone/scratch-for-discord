@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_unarchived_thread";
 
 const blockData = {
-    "message0": "%{BKY_UNARCHIVED_THREAD}",
+    "message0": "(un)archived thread",
     "colour": "#AA97D8",
     "output": "Thread",
     "tooltip": "",
