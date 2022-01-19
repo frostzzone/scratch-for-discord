@@ -3,7 +3,7 @@ import * as Blockly from "blockly";
 const blockName = "s4d_on_direct";
 
 const blockData = {
-    "message0": "%{BKY_ON_DIRECT} %1 %2",
+    "message0": "When a direct message is recieved %1 %2",
     "colour": "#F5AB1A",
     "args0": [
         {
