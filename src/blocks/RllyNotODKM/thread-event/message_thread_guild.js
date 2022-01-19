@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_server_thread";
 
 const blockData = {
-    "message0": "%{BKY_THREAD_MESSAGE_GUILD}",
+    "message0": "thread message server",
     "colour": "#D85E47",
     "output": "Server",
     "tooltip": "",
