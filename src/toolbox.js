@@ -656,6 +656,96 @@ export default (Blockly, value) => {
 </category>-->
 </category>
 
+<category name="RllyNotODKM" colour="f63e02">
+       <category name="DM Blocks" colour="#00BBE6">
+            <label text="%{BKY_MESSAGE_RELATED_BLOCKS}" web-class="boldtext"></label>
+            <block type="s4d_send_member"></block>
+            <label text="{{ DETECT_MESSAGES }}"></label>
+            <block type="s4d_on_direct"></block>
+            <label text="{{ MESSAGE_INFORMATIONS }}"></label>
+            <block type="s4d_direct_content"></block>
+            <block type="s4d_direct_id"></block>
+            <label text="{{ DIRECT_AUTHOR_INFO }}"></label>
+            <block type="s4d_direct_author_raw"></block>
+            <block type="s4d_direct_bot"></block>
+            <label text="{{ MESSAGE_ACTIONS }}"></label>
+            <block type="s4d_direct_reply">
+                <value name="CONTENT">
+                    <shadow type="text">
+                        <field name="TEXT">{{ REPLY_EXAMPLE }}</field>
+                    </shadow>
+                </value>
+                <value name="MENTION">
+                    <block type="logic_boolean">
+                        <field name="BOOL">FALSE</field>
+                    </block>
+                </value>
+            </block>
+            <block type="s4d_direct_reaction">
+                <value name="REACTION">
+                    <shadow type="text">
+                        <field name="TEXT">👍</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="s4d_direct_delete"></block>
+        </category>
+	       <category name="Threads" colour="#AA97D8">
+            <label text="%{BKY_LABEL_THREAD_MESSAGE}"/>
+            <block type="s4d_on_thread_message"/>
+            <block type="s4d_send_thread"/>
+            <label text="{{ MESSAGE_INFORMATIONS }}"/>
+            <block type="s4d_thread_message_content"/>
+            <block type="s4d_thread_message_id"/>
+            <block type="s4d_thread_message_author"/>
+            <label text="%{BKY_LABEL_MESSAGE_CONTEXT}"/>
+            <block type="s4d_message_thread"/>
+            <block type="s4d_server_thread"/>
+            <label text="%{BKY_RELATED_TO_MESSAGE_STRINGS}"/>
+            <block type="s4d_thread_message_author_raw"/>
+            <block type="s4d_thread_raw"/>
+            <block type="s4d_thread_guild_raw"/>
+            <label text="%{BKY_MESSAGE_ACTIONS}"/>
+            <block type="s4d_start_thread"/>
+            <block type="s4d_started_thread"/>
+            <block type="s4d_thread_reply">
+                <value name="CONTENT">
+                    <shadow type="text">
+                        <field name="TEXT">{{ REPLY_EXAMPLE }}</field>
+                    </shadow>
+                </value>
+                <value name="MENTION">
+                    <block type="logic_boolean">
+                        <field name="BOOL">FALSE</field>
+                    </block>
+                </value>
+            </block>
+            <block type="s4d_thread_reaction">
+                <value name="REACTION">
+                    <shadow type="text">
+                        <field name="TEXT">👍</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="s4d_thread_message_delete"/>
+            <label text="%{BKY_LABEL_THREAD_ARCHIVE}"/>
+            <block type="s4d_on_thread_archive"/>
+            <block type="s4d_on_thread_unarchive"/>
+            <block type="s4d_unarchived_thread"/>
+            <label text="%{BKY_THREAD_CREATE_LABEL}"/>
+            <block type="s4d_on_thread_create"/>
+            <block type="s4d_created_thread_on"/>
+            <label text="%{BKY_THREAD_DELETE_LABEL}"/>
+            <block type="s4d_on_thread_delete"/>
+            <block type="s4d_deleted_thread"/>
+            <label text="%{BKY_THREAD_OTHER_LABEL}"/>
+            <block type="s4d_thread_channel"/>
+            <block type="s4d_thread_name"/>
+            <block type="s4d_thread_server"/>
+            <block type="s4d_thread_archive"/>
+        </category>
+</cateory>
+
 <category name="Retro and XL83" colour="#AAE941">
 <category name="temp channels" colour="#5ba58b">
     <block type="s4d_temp_register"/>
