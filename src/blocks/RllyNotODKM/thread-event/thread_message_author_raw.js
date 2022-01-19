@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_thread_message_author_raw";
 
 const blockData = {
-    "message0": "%{BKY_THREAD_MESSAGE_AUTHOR_RAW}",
+    "message0": "%1 of thread message author",
     "args0": [
         {
             "type": "field_dropdown",
