@@ -3,7 +3,7 @@ import * as Blockly from "blockly";
 const blockName = "s4d_on_thread_delete";
 
 const blockData = {
-    "message0": "%{BKY_ON_THREAD_DELETE} %1 %2",
+    "message0": "When thread is deleted %1 %2",
     "colour": "#F5AB1A",
     "args0": [
         {
