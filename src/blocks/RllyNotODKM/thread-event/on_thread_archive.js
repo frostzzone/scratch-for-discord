@@ -3,7 +3,7 @@ import * as Blockly from "blockly";
 const blockName = "s4d_on_thread_archive";
 
 const blockData = {
-    "message0": "%{BKY_ON_THREAD_ARCHIVE} %1 %2",
+    "message0": "When thread is archived %1 %2",
     "colour": "#F5AB1A",
     "args0": [
         {
