@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_created_thread_on";
 
 const blockData = {
-    "message0": "%{BKY_CREATED_THREAD_ON}",
+    "message0": "created thread",
     "colour": "#AA97D8",
     "output": "Thread",
     "tooltip": "",
