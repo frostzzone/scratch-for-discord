@@ -4,7 +4,7 @@ import { registerRestrictions } from "../../../restrictions";
 const blockName = "s4d_direct_content";
 
 const blockData = {
-    "message0": "%{BKY_DIRECT_CONTENT}",
+    "message0": "direct mesage content",
     "colour": "#5BA58C",
     "tooltip": "",
     "output": "String",
