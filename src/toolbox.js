@@ -633,10 +633,12 @@ export default (Blockly, value) => {
 </block>
 </category>
 
-<category name="Category" colour="#2f64fa" hidden="true">
+<category name="Category" colour="#2f64fa" hidden="false">
 <block type="frost_message_category"/>
 <block type="frost_category_get"/>
 <block type="frost_category_id"/>
+<block type="create_category_then"/>
+<block type="frost_created_cat"/>
 </category>
 
 <category name="Embed" colour="#40bf4a">
