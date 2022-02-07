@@ -15,13 +15,12 @@
                 <ToolboxModal></ToolboxModal>
                 <LanguageMenu></LanguageMenu>
                 <ExamplesMenu></ExamplesMenu>
-                <preBuilds></preBuilds>
-                <TokenModal></TokenModal>
-                <Socials></Socials>
                 <b-nav-item href="https://androz2091.gitbook.io/scratch-for-discord/" target="_blank">{{ $t('help') }}</b-nav-item>
-                <Credit></Credit>
             </b-navbar-nav>
             <b-navbar-nav class="ml-auto">
+                    <b-button style="margin-right: 2px;border-radius: 0em; border-top-left-radius: 0.25em; border-bottom-left-radius: 0.25em">
+                    <b-icon-discord></b-icon-discord>
+                </b-button>
                 <b-button style="border-right-color: #161719; border-radius: 0em; border-top-left-radius: 0.25em; border-bottom-left-radius: 0.25em">
                 <span contenteditable="true" id="docName">{{ $t("untitled") }}</span>
                 </b-button>
@@ -36,16 +35,12 @@
 <script>
 import Blockly from "blockly";
 import JSZip from "jszip";
-import TokenModal from "./TokenModal.vue";
 import FileMenu from "./FileMenu.vue";
 import EditMenu from "./EditMenu.vue";
 import LanguageMenu from "./LanguageMenu.vue";
 import ExamplesMenu from "./ExamplesMenu.vue";
 import CodeModal from "./CodeModal.vue";
-import preBuilds from "./preBuilds.vue";
 import ToolboxModal from "./ToolboxModal.vue";
-import Socials from "./socials.vue";
-import Credit from "./Credit";
 import localforage from 'localforage';
 import r from "./requires";
 import swal from "sweetalert2";
@@ -57,11 +52,7 @@ export default {
         LanguageMenu,
         ExamplesMenu,
         CodeModal,
-        TokenModal,
-        preBuilds,
-        ToolboxModal,
-        Credit,
-        Socials
+        ToolboxModal
     },
     computed: {
         configurationValidated: function () {
