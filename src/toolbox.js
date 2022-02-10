@@ -447,7 +447,7 @@ export default (Blockly, value) => {
                     </category>
 				<sep class="bt"/>
 				
-			<category name="member's blocks">
+			<category name="member's blocks" expanded="true">
 				<category name="ahq" colour="#ff0000">
         <block type="server_file"/>
         <block type="s4d_history"/>
@@ -515,6 +515,9 @@ export default (Blockly, value) => {
         </category>
         <category name="chatbot" colour="#ff0000">
         <block type="chat_ahq"/>
+        </category>
+        <category name="mod" colour="#ff0880">
+        <block type="ahq-mod"/>
         </category>
         </category>
 
@@ -596,6 +599,7 @@ export default (Blockly, value) => {
 <label text="Scratch" web-class="boldtext"></label>
 <block type="scratch_get_about_then"/>
 <block type="scratch_about_user"/>
+<label text="ㅤ" web-class="boldtext"></label>
 </category>
 
 <category name="Useless" colour="#2a46fa" hidden="true"><block type="frost_image"/><block type="frost_drop1"/><block type="poll"><value name="title"><shadow type="text"><field name="TEXT">Poll time</field></shadow></value><value name="message"><shadow type="text"><field name="TEXT">You like polls?</field></shadow></value><value name="color"><block type="colour_picker"></block></value><value name="upvote"><shadow type="text"><field name="TEXT">👍</field></shadow></value><value name="downvote"><shadow type="text"><field name="TEXT">👎</field></shadow></value></block></category>
@@ -635,6 +639,7 @@ export default (Blockly, value) => {
 <block type="frost_real_reply_delete"/>
 <block type="frost_typing"><value name="time"><shadow type="math_number"><field name="NUM">1</field></shadow></value><value name="CONTENT"><shadow type="text"><field name="TEXT">Hey!</field></shadow></value>
 </block>
+<label text="ㅤ" web-class="boldtext"></label>
 </category>
 
 <category name="Category/Channel" colour="#2f64fa" hidden="false">
@@ -648,6 +653,7 @@ export default (Blockly, value) => {
 <block type="frost_category_id"/>
 <block type="create_category_then"/>
 <block type="frost_created_cat"/>
+<label text="ㅤ" web-class="boldtext"></label>
 </category>
 
 <category name="Embed" colour="#40bf4a">
@@ -656,6 +662,7 @@ export default (Blockly, value) => {
 <block type="frost_add_field"/>
 <label text="For Jose Or Redo Embeds"></label>
 <block type="frost_send_embed_rr"/>
+<label text="ㅤ" web-class="boldtext"></label>
 </category>
 
 <category name="filesystem (fs)" colour="#347dfa">
@@ -668,16 +675,24 @@ export default (Blockly, value) => {
 <block type="frost_fs_data"/>
 <label text="For if you get an error (is a boolean and string)"></label>
 <block type="frost_fs_err"/>
+<label text="ㅤ" web-class="boldtext"></label>
+</category>
+
+<category name="Time" hidden="true">
+<block type="s4d_create_time_then"/>
+<label text="ㅤ" web-class="boldtext"></label>
 </category>
 
 <category name="Other" colour="#5ba58b">
-<block type="frost_fs_err"/>
 <block type="frost_current"/>
+<block type="frost_fs_err"/>
 <block type="frost_json_to_string"/>
+<label text="ㅤ" web-class="boldtext"></label>
 </category>
 
 <category name="Translate" hidden="true">
 <block name="frost_translate"/>
+<label text="ㅤ" web-class="boldtext"></label>
 </category>
 </category>
 
