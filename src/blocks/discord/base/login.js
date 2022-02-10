@@ -34,6 +34,6 @@ Blockly.JavaScript[blockName] = function(block) {
         } else {
             console.log("Intents are not turned on!")
         }
-    });\nn`;
+    });\n`;
     return code;
 };

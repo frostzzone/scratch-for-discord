@@ -1,6 +1,7 @@
 export default async function require(array,oldarray) {
 oldarray.forEach(js=>{
-  if (js.includes("//ahq mod api")) {
+    if (js.includes("//ahq mod api")) {
+
         array.push(`"discord-anti-spam": "git+https://github.com/ahqsoftwares/discord-anti-spam.git",
         "discord-antiraid": "^2",
         "gif-frames": "^1.0.1",`)
