@@ -9,7 +9,7 @@ import VueToast from 'vue-toast-notification';
 import VueTour from 'vue-tour';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import savenload from './save-load';
-
+/* eslint-disable */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(VueTour);
@@ -21,7 +21,7 @@ Vue.use(IconsPlugin);
 
 Vue.config.productionTip = false;
 Vue.config.ignoredElements = ["field","block","category","xml","mutation","value","sep"];
-
+//hello
 import r from "./require";
 
 import blocklyLocaleEN from "blockly/msg/en";
@@ -43,12 +43,14 @@ const i18n = new Vuei18n({
 });
 
 import toolbox from "./toolbox";
+import {ContentHighlight} from '@blockly/workspace-content-highlight';
 //import {Backpack} from '@blockly/workspace-backpack';
 import Theme from '@blockly/theme-dark';
 Vue.mixin({
     methods: {
         async reloadWorkspace(){
             let val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
+						let arr = await localforage.getItem("blocks") === null ? null : await localforage.getItem("blocks")
             // Get current workspace
             let workspace = this.$store.state.workspace;
             // Convert it to a dom string
@@ -78,7 +80,7 @@ Vue.mixin({
         },
         drag: true,
         wheel: true},
-                toolbox: toolbox(Blockly,val)
+                toolbox: toolbox(Blockly,val,arr)
             });
    
             Blockly.Xml.domToWorkspace(dom, newWorkspace);
@@ -86,6 +88,8 @@ Vue.mixin({
             this.$store.commit("setWorkspace", {
                 workspace: newWorkspace
             })
+            const contentHighlight = new ContentHighlight(workspace);
+contentHighlight.init();
 ;				
 
             // Return the workspace

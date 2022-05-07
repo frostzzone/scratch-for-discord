@@ -1,4 +1,25 @@
-export default (Blockly, value) => {
+/* eslint-disable */ 
+export default (Blockly, value, array) => {
+	let author_names = {}
+    let authors_name = []
+    let category = []
+	for (var [key, value3] of Object.entries(array)) {
+        let blocks_name = []
+		for (var [key2, value4] of Object.entries(value3)) {
+			blocks_name.push(key2)
+		}
+        author_names[key] = blocks_name
+        authors_name.push(key)
+	}
+    authors_name.forEach(a=>{
+        category.push(`<category name="${a}" colour="#5b80a5">`)
+        let author = author_names[a]
+        author.forEach(b=>{
+            category.push(`<block type="${b}"/>`)
+        })
+        category.push("</category>")
+    })
+	
   return (`
     <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
         
@@ -430,7 +451,9 @@ export default (Blockly, value) => {
 </category>
 
         <category name="{{ TOOLBOX_FUNCTIONS }}" colour="#995ba5" custom="PROCEDURE" />
-	
+			<category name="MarketPlace" colour="#D14081"> 
+                ${category.join("\n")}
+			</category>
         <category name="{{ TOOLBOX_OTHER }}" colour="#D14081"> 
         
             <block type="anti_link"/>

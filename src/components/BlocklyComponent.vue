@@ -8,9 +8,10 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Blockly from "blockly";
-
 import { disableUnapplicable } from "../restrictions";
+import {ContentHighlight} from '@blockly/workspace-content-highlight';
 import toolbox from "../toolbox";
 //import toolbox from "../easter-toolbox";
 import {Backpack} from '@blockly/workspace-backpack';
@@ -32,7 +33,7 @@ export default {
                                 Blockly.ContextMenuRegistry.registry.unregister("fav")
             Blockly.ContextMenuRegistry.registry.unregister("refav")
             let val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
-                        
+                       	let arr = await localforage.getItem("blocks") === null ? null : await localforage.getItem("blocks") 
             // Convert it to a dom string
             const dom = Blockly.Xml.workspaceToDom(workspace);
             // Delete the current workspace
@@ -60,8 +61,11 @@ export default {
         },
         drag: true,
         wheel: true},
-                toolbox: toolbox(Blockly,val)
+                toolbox: toolbox(Blockly,val,arr)
             });
+
+const contentHighlight = new ContentHighlight(workspace);
+contentHighlight.init();
                            Blockly.ContextMenuRegistry.registry.register({
       displayText: 'Add to favorite',
       preconditionFn: function(scope) {
@@ -77,17 +81,14 @@ export default {
       },
       callback: async function(scope) {
           let type = scope.block.type
-
                               if(val === null){
                          await localforage.setItem("fav",[type])
                          val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
-
         reloadWorkspace(newWorkspace)
                     }else{
                         val.push(type)
                         await localforage.setItem("fav",val)
                         val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
-
         reloadWorkspace(newWorkspace)
                     }
       },
@@ -140,7 +141,7 @@ export default {
             Blockly.ContextMenuRegistry.registry.unregister("fav")
             Blockly.ContextMenuRegistry.registry.unregister("refav")
             let val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
-                        
+             let arr = await localforage.getItem("blocks") === null ? null : await localforage.getItem("blocks")           
             // Convert it to a dom string
             const dom = Blockly.Xml.workspaceToDom(workspace);
             // Delete the current workspace
@@ -168,8 +169,10 @@ export default {
         },
         drag: true,
         wheel: true},
-                toolbox: toolbox(Blockly,val)
+                toolbox: toolbox(Blockly,val,arr)
             });
+            const contentHighlight = new ContentHighlight(workspace);
+contentHighlight.init();
                Blockly.ContextMenuRegistry.registry.register({
       displayText: 'Add to favorite',
       preconditionFn: function(scope) {
@@ -185,17 +188,14 @@ export default {
       },
       callback: async function(scope) {
           let type = scope.block.type
-
                               if(val === null){
                          await localforage.setItem("fav",[type])
                          val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
-
         reloadWorkspace2(newWorkspace)
                     }else{
                         val.push(type)
                         await localforage.setItem("fav",val)
                         val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
-
         reloadWorkspace2(newWorkspace)
                     }
       },
@@ -244,10 +244,10 @@ export default {
 ;				
         }
         let val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
+        let arr = await localforage.getItem("blocks") === null ? null : await localforage.getItem("blocks") 
         setInterval(async()=>{
             val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
         },1000)
-
 function svgToPng_(data, width, height, callback) {
     var canvas = document.createElement("canvas");
     var context = canvas.getContext("2d");
@@ -315,7 +315,6 @@ function svgToPng_(data, width, height, callback) {
   
     svgToPng_(data, width, height, callback);
   }
-
   Blockly.downloadScreenshot = function(workspace) {
     workspaceToSvg_(workspace, function(datauri) {
       var a = document.createElement('a');
@@ -354,9 +353,11 @@ function svgToPng_(data, width, height, callback) {
         },
         drag: true,
         wheel: true},
-                toolbox: toolbox(Blockly,val),
+                toolbox: toolbox(Blockly,val,arr),
             }
         });
+        const contentHighlight = new ContentHighlight(workspace);
+contentHighlight.init();
             Blockly.ContextMenuRegistry.registry.register({
       displayText: 'Add to favorite',
       preconditionFn: function(scope) {
@@ -372,17 +373,14 @@ function svgToPng_(data, width, height, callback) {
       },
       callback: async function(scope) {
           let type = scope.block.type
-
                               if(val === null){
                          await localforage.setItem("fav",[type])
                          val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
-
         reloadWorkspace(workspace)
                     }else{
                         val.push(type)
                         await localforage.setItem("fav",val)
                         val = await localforage.getItem("fav") === null ? null : await localforage.getItem("fav")
-
         reloadWorkspace(workspace)
                     }
       },
@@ -437,7 +435,6 @@ function svgToPng_(data, width, height, callback) {
       id: 'refav',
       weight: 100,
     });
-
 				const defaultOptions = {
 					contextMenu: {
 						emptyBackpack: true,
@@ -451,7 +448,6 @@ function svgToPng_(data, width, height, callback) {
         const workspaceSearch = new WorkspaceSearch(workspace);
         workspaceSearch.init();
         workspaceSearch.close();
-
 				const backpack = new Backpack(workspace,defaultOptions);
 				backpack.init();
                 Load(backpack)
@@ -497,7 +493,6 @@ function svgToPng_(data, width, height, callback) {
 .blocklyText, .blocklyHtmlInput, .blocklyTreeLabel {
   font-family: sans-serif !important;
 }
-
                         .blocklyTreeIcon {
 filter: invert(100%) sepia(0%) saturate(2950%) hue-rotate(348deg) brightness(118%) contrast(96%) !important;
 }

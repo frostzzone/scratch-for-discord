@@ -1,3 +1,4 @@
+/* eslint-disable */
 import localforage from "localforage";
 export default async function Load(backpack){
     console.log('started backpack')
