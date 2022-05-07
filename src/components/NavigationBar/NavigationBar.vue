@@ -20,6 +20,7 @@
                 <Socials></Socials>
                 <b-nav-item href="https://androz2091.gitbook.io/scratch-for-discord/" target="_blank">{{ $t('help') }}</b-nav-item>
                 <Credit></Credit>
+                <login></login>
             </b-navbar-nav>
             <b-navbar-nav class="ml-auto">
                 <b-button style="border-right-color: #161719; border-radius: 0em; border-top-left-radius: 0.25em; border-bottom-left-radius: 0.25em">
@@ -45,7 +46,8 @@ import CodeModal from "./CodeModal.vue";
 import preBuilds from "./preBuilds.vue";
 import ToolboxModal from "./ToolboxModal.vue";
 import Socials from "./socials.vue";
-import Credit from "./Credit";
+import Credit from "./Credit.vue";
+import login from "./login.vue";
 import localforage from 'localforage';
 import r from "./requires";
 import swal from "sweetalert2";
@@ -61,7 +63,8 @@ export default {
         preBuilds,
         ToolboxModal,
         Credit,
-        Socials
+        Socials,
+        login
     },
     computed: {
         configurationValidated: function () {

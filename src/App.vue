@@ -12,40 +12,34 @@
 import Blockly from "blockly";
 import NavBarComponent from "./components/NavigationBar/NavigationBar.vue";
 import BlocklyComponent from "./components/BlocklyComponent";
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, onValue } from "firebase/database";
+import localforege from "localforage";
+import { v4 } from 'uuid';
+let id = v4()
+console.log(`id: ${id}`)
+const firebaseConfig = {
+  apiKey: "AIzaSyC82nngr2yVh2TfnCZD7cFRXuBG6JOtX3I",
+  authDomain: "marketplace-d083a.firebaseapp.com",
+  projectId: "marketplace-d083a",
+  storageBucket: "marketplace-d083a.appspot.com",
+  messagingSenderId: "52598504857",
+  appId: "1:52598504857:web:150dd5f436ada68eaa6708",
+  measurementId: "G-4FC2ER1K83"
+};
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const starCountRef = ref(db, 'marketplace/' + id);
+onValue(starCountRef, async (snapshot) => {
+  const data = snapshot.val();
+  console.log(data)
+  await localforage.setItem("blocks",data)
+});
+
+
+
 import load_block from "./load_block";
-import localforage from "localforage";
-	
-var test = {
-	josetrindade1:{
-		blocktest:{
-			BlockData: {
-            "message0": "ok this test block is working",
-            "colour": "#F5AB1A",
-            "args0": [
-            ]
-			},
-			BlockCode: `const code = "console.log('1')";
-return code;`
-		},
-	},
-    randomuser:{
-		blocktest2:{
-			BlockData: {
-            "message0": "testing blocks etc lol lmao bitch",
-            "colour": "#F5AB1A",
-            "args0": [
-            ]
-			},
-			BlockCode: `const code = "console.log('2')"; 
-return code;`
-		},
-	}
-}
-localforage.setItem("blocks",test,function(err){
-	if(err){
-		console.error(err)
-	}
-})
+
 load_block() 
 
 
