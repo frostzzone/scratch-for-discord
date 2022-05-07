@@ -46,6 +46,7 @@
     "path": "^0.12.7",
     "pretty": "^2.0.0",
     "promises": "^0.2.5",
+    "query-string": "^7.1.1",
     "sass-loader": "^10",
     "save-svg-as-png": "^1.4.17",
     "sweetalert2": "^10.16.9",

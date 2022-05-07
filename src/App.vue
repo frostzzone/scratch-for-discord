@@ -8,36 +8,66 @@
 
 <script>
 /* eslint-disable */
-
+import querySring from 'query-string';
+import axios from 'axios';
+import localforage from "localforage";
 import Blockly from "blockly";
 import NavBarComponent from "./components/NavigationBar/NavigationBar.vue";
 import BlocklyComponent from "./components/BlocklyComponent";
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from "firebase/database";
-import localforege from "localforage";
-import { v4 } from 'uuid';
-let id = v4()
-console.log(`id: ${id}`)
-const firebaseConfig = {
-  apiKey: "AIzaSyC82nngr2yVh2TfnCZD7cFRXuBG6JOtX3I",
-  authDomain: "marketplace-d083a.firebaseapp.com",
-  projectId: "marketplace-d083a",
-  storageBucket: "marketplace-d083a.appspot.com",
-  messagingSenderId: "52598504857",
-  appId: "1:52598504857:web:150dd5f436ada68eaa6708",
-  measurementId: "G-4FC2ER1K83"
-};
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-const starCountRef = ref(db, 'marketplace/' + id);
-onValue(starCountRef, async (snapshot) => {
-  const data = snapshot.val();
-  console.log(data)
-  await localforage.setItem("blocks",data)
-});
-
-
-
+let code = window.location.search
+let realCode = code.replace("?code=","")
+if(realCode !== ""){
+    const data = {
+        'client_id': '972506743953309776',
+        'client_secret': 'ONeUMdm36Y4YhBkhoyvqA7SS5DF9d3vF',
+        'grant_type': 'authorization_code',
+        'code': realCode,
+        'redirect_uri': querySring.stringifyUrl({ url: 'http://localhost:8080' }),
+    }
+    const strData = querySring.stringify(data)  
+    const headers = {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+    fetch('https://discord.com/api/oauth2/token', {
+        method: 'POST',
+        headers,
+        body: strData, 
+    }).then(response => response.json()).then(data2 => {
+        axios.get("https://discord.com/api/users/@me",{
+        headers: {
+        "authorization": `${data2.token_type} ${data2.access_token}`
+        }
+    }).then(async response => {
+            let id = response.data.id
+            await localforage.setItem("UserId",id)
+        }).catch(err => {
+            console.log(err);
+        });
+    });
+}
+setTimeout(async()=>{
+    let id = await localforage.getItem("UserId");
+    console.log(id)
+    const firebaseConfig = {
+        apiKey: "AIzaSyC82nngr2yVh2TfnCZD7cFRXuBG6JOtX3I",
+        authDomain: "marketplace-d083a.firebaseapp.com",
+        projectId: "marketplace-d083a",
+        storageBucket: "marketplace-d083a.appspot.com",
+        messagingSenderId: "52598504857",
+        appId: "1:52598504857:web:150dd5f436ada68eaa6708",
+        measurementId: "G-4FC2ER1K83"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const starCountRef = ref(db, 'marketplace/' + id);
+    onValue(starCountRef, async (snapshot) => {
+        const data = snapshot.val();
+        console.log(data)
+        await localforage.setItem("blocks",data)
+    });
+},1)
 import load_block from "./load_block";
 
 load_block() 
