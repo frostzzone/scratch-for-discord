@@ -484,13 +484,13 @@ export default (Blockly, value) => {
         <block type="server_file"/>
         <block type="snd_ahq"/>
         <block type="ahq_value_snd"/>
-        <category name="member" colour="#006600">
+        <category name="Member" colour="#006600">
         <label text="Fetch members of a server" web-class="boldtext"></label>
         <block type="s4d_get_rndm"/>
         <label text="Get random member" web-class="boldtext"></label>
         <block type="s4d_get_rndmber"/>
         </category>
-        <category name="forms" colour="#66ffff">
+        <category name="Forms" colour="#66ffff">
         <block type="on_real_form"/>
         <block type="ahq_ahq_modal"/>
         <block type="ahq_ahq_ahq_modal"/>
@@ -510,7 +510,7 @@ export default (Blockly, value) => {
         <label text="Send Forms" web-class="boldtext"></label>
         <block type="snd_ahq_modal"/>
         </category>
-        <category name="button" colour="#ff0019">
+        <category name="Button" colour="#ff0019">
         <label text="Event" web-class="boldtext"></label>
         <block type="on_real_button"/>
         <label text="Button Information" web-class="boldtext"></label>
@@ -534,21 +534,21 @@ export default (Blockly, value) => {
         <block type="url_ahq_button"/>
         <block type="d_ahq_button"/>
         </category>
-        <category name="cmd register" colour="#6600cc">
+        <category name="Cmd register" colour="#6600cc">
         <label text="Create a slash command" web-class="boldtext"></label>
         <block type="s4d_reg_slash"/>
         <block type="s4d_reg_slash_options"/>
         <block type="s4d_reg_new_options"/>
         </category>
-        <category name="profanity" colour="#ff0000">
+        <category name="Profanity" colour="#ff0000">
         <block type="ahq_bdwrd"/>
         <block type="ahq_bdwrd_cn"/>
         </category>
-        <category name="embed-read" colour="#993399">
+        <category name="Embed-read" colour="#993399">
         <block type="ahq_embed_is"/>
         <block type="ahq_embed_info"/>
         </category>
-        <category name="embed" colour="#993399">
+        <category name="Embed" colour="#993399">
         <block type="make_ahq_embed"/>
         <label text="Embed Send" web-class="boldtext"></label>
         <block type="send_ahq_embed"/>
@@ -564,10 +564,10 @@ export default (Blockly, value) => {
         <block type="footer_ahq_embed"/>
         <block type="stamp_ahq_embed"/>
         </category>
-        <category name="chatbot" colour="#ff0000">
+        <category name="Chatbot" colour="#ff0000">
         <block type="chat_ahq"/>
         </category>
-        <category name="mod" colour="#ff0880">
+        <category name="Mod" colour="#ff0880">
         <block type="ahq-mod"/>
         </category>
         <category name="Convert API" colour="#3333ff">
@@ -660,7 +660,7 @@ export default (Blockly, value) => {
 	</category>
  	</category>
 
-<category name="frostzzone" colour="#347dfa">
+<category name="Frostzzone" colour="#347dfa">
 <category name="Scratch and Github" colour="#1f1f1f">
 <label text="Github" web-class="boldtext"></label>
 <block type="github_get_then"/>
@@ -841,7 +841,7 @@ export default (Blockly, value) => {
 <label text="ㅤ" web-class="boldtext"></label>
 </category>
 
-<category name="filesystem (fs)" colour="#347dfa">
+<category name="Filesystem (fs)" colour="#347dfa">
 <block type="frost_fs_read"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
 <block type="frost_fs_append"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
 <block type="frost_fs_write"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
@@ -869,7 +869,7 @@ export default (Blockly, value) => {
 <label text="ㅤ" web-class="boldtext"></label>
 </category>
 
-<category name="event" colour="230">
+<category name="Event" colour="230">
 <block type="create_event"><value name="NAME"><shadow type="text"><field name="TEXT">Hey</field></shadow></value></block>
 <block type="emit_event"><value name="NAME"><shadow type="text"><field name="TEXT">Hey</field></shadow></value></block>
 </category>
@@ -975,7 +975,7 @@ export default (Blockly, value) => {
 		<block type="slash_unarchieve_ticket"/>
 <block type="slash_message_channel"/>
         </category>
-	<category name="lyric finder" colour="#5ba58b">
+	<category name="Lyric finder" colour="#5ba58b">
 	 	<block type="find_lyric_than"/>
 		<block type="lyric"/>
 	</category>
@@ -1140,31 +1140,31 @@ export default (Blockly, value) => {
         </category>
         
 				<category name="{{ JOSE }}" colour="#00664d">
-<category name = "embeds pagination" colour="#ed5a5a">
+<category name = "Embeds pagination" colour="#ed5a5a">
                     <block type="pagination_embed"/>
                     <block type="start_pagination"/>
                 </category>
-                <category name = "captcha" colour="#ed8b5a">
+                <category name = "Captcha" colour="#ed8b5a">
                     <block type="create_captcha"/>
                     <block type="captcha_image"/>
                     <block type="captcha_value"/>
                     <block type="send_captcha"/>
                 </category>
-                <category name = "progess bar" colour = "#edbc5a">
+                <category name = "Progess bar" colour = "#edbc5a">
                     <block type="filled_bar"/>
                     <block type="split_bar"/>
                 </category>
-                <category name="firebase" colour="#eded5a">
+                <category name="Firebase" colour="#eded5a">
                     <block type="start_db"/>
                 </category> 
-                <category name="voice channel" colour="#bced5a">
+                <category name="Voice channel" colour="#bced5a">
                     <block type="mute_member"/>
                     <block type="unmute_member"/>
                     <block type="deaf_member"/>
                     <block type="undeaf_member"/>
                     <block type="move_member"/>
                 </category>
-                <category name="date" colour="#8bed5a">
+                <category name="Dates" colour="#8bed5a">
                     <block type="s4d_current"></block>
                     <block type="unix_to_date"/>
                     <block type="date_to_unix"/>
@@ -1175,23 +1175,23 @@ export default (Blockly, value) => {
                     <block type="new_regex"/>
                     <block type="test_regex"/>
                 </category>
-                <category name="attachment" colour="#5aed8b">
+                <category name="Attachment" colour="#5aed8b">
                     <block type="att_size"/>
                     <block type="att_name"/>
                     <block type="att_type"/>
                     <block type="att_url"/>
                 </category>
-                <category name="discord together" colour="#5aedbc">
+                <category name="Discord together" colour="#5aedbc">
                     <block type="create_together"/>
                     <block type="invite_code"/>
 		    <block type="vc_channel"/>
                 </category>
-                <category name="cooldown" colour="#5aeded">
+                <category name="Cooldown" colour="#5aeded">
                     <block type="set_member_cooldown"/>
                     <block type="delete_member_cooldown"/>
                     <block type="is_member_on_cooldown"/>
                 </category>
-                <category name="invite tracker" colour="#5abced">
+                <category name="Invite tracker" colour="#5abced">
                     <category name="joined" colour="#2873eb">
                         <block type="userinvited"/>
                         <block type="Member"/>
@@ -1199,18 +1199,18 @@ export default (Blockly, value) => {
                         <block type="Server"/>
                         <block type="Amount"/>
                     </category>
-                    <category name="leave" colour="#0d5ede">
+                    <category name="Leave" colour="#0d5ede">
                         <block type="UserLeave"/>
                         <block type="Member"/>
                         <block type="InviteMember"/>
                         <block type="Server"/>
                         <block type="Amount"/>
                     </category>
-                    <category name="others" colour="#05409e">
+                    <category name="Others" colour="#05409e">
                         <block type="get_member_invites"/>
                     </category>
                 </category>
-                <category name="image generation" colour="#5a8bed">
+                <category name="Image generation" colour="#5a8bed">
                     <block type="1imagepng">
                     <mutation divisor_input="true"></mutation>
                     </block>
@@ -1221,69 +1221,69 @@ export default (Blockly, value) => {
                     <block type="send_on_channel"/>
                 </category>
                 <category name="Events" colour="#5a5aed">
-                    <category name="channel" colour="#1d6ff2">
-                        <category name="channel permissions update" colour="#055eed">
+                    <category name="Channel" colour="#1d6ff2">
+                        <category name="Channel permissions update" colour="#055eed">
                             <block type="on_channelPermissionsChange"/>
                             <block type="s4d_channel_raw"/>
                             <block type="permissions"/>
                         </category>
-                        <category name="channel topic update" colour="#024abd">
+                        <category name="Channel topic update" colour="#024abd">
                             <block type="on_channelTopicChange"/>
                             <block type="s4d_channel_raw"/>
                             <block type="topic"/>
                         </category>
                     </category>
-                    <category name="member" colour="#01388f">
-                        <category name="member boost" colour="#01245c">
+                    <category name="Member" colour="#01388f">
+                        <category name="Member boost" colour="#01245c">
                             <block type="on_boost"/>
                             <block type="member_raw"/>
                             <block type="member"/>
                         </category>
-                        <category name="member unboost" colour="#01165c">
+                        <category name="Member unboost" colour="#01165c">
                             <block type="on_unboost"/>
                             <block type="member_raw"/>
                             <block type="member"/>
                         </category>
-                        <category name="member role add" colour="#010c33">
+                        <category name="Member role add" colour="#010c33">
                             <block type="on_roleadd"/>
                             <block type="event-role"/>
                             <block type="member_raw"/>
                             <block type="member"/>
                         </category>
-                        <category name="member role remove" colour="#01071c">
+                        <category name="Member role remove" colour="#01071c">
                             <block type="on_roleremove"/>
                             <block type="event-role"/>
                             <block type="member_raw"/>
                             <block type="member"/>
                         </category>
                     </category>
-                    <category name="guild" colour="#0d2e4d">
-                        <category name="guild boost level up" colour="#174169">
+                    <category name="Guild" colour="#0d2e4d">
+                        <category name="Guild boost level up" colour="#174169">
                             <block type="on_up"/>
                             <block type="event-guild"/>
                             <block type="boost"/>
                         </category>
-                        <category name="guild boost level down" colour="#2a67a1">
+                        <category name="Guild boost level down" colour="#2a67a1">
                             <block type="on_down"/>
                             <block type="event-guild"/>
                             <block type="boost"/>
                         </category>
-                        <category name="guild banner add" colour="#3a82c7">
+                        <category name="Guild banner add" colour="#3a82c7">
                             <block type="on_banner_add"/>
                             <block type="event-guild"/>
                             <block type="banner-url"/>
                         </category>
-                        <category name="guild vanity url add" colour="#52a4f2">
+                        <category name="Guild vanity url add" colour="#52a4f2">
                             <block type="on_vanity_add"/>
                             <block type="event-guild"/>
                             <block type="vanity-url"/>
                         </category>
-                        <category name="guild vanity url remove" colour="#52cdf2">
+                        <category name="Guild vanity url remove" colour="#52cdf2">
                             <block type="on_vanity_remove"/>
                             <block type="event-guild"/>
                             <block type="vanity-url"/>
                         </category>
-                        <category name="guild vanity url update" colour="#52f2e5">
+                        <category name="Guild vanity url update" colour="#52f2e5">
                             <block type="on_vanity_update"/>
                             <block type="event-guild"/>
                             <block type="url-update"/>
@@ -1524,12 +1524,12 @@ export default (Blockly, value) => {
         </category>
         </category>
 
-	<category name="register" colour="#65700c">
+	<category name="Register" colour="#65700c">
         <label text="Register context menu" web-class="boldtext"></label>
         <block type="register_c_m"></block>
 	<block type="register_c_m_g"></block>
         </category>
-        <category name="slash" colour="#ff2f00">
+        <category name="Slash" colour="#ff2f00">
         <label text="%{BKY_T_RS}"></label>
         <block type="on_slash"></block>
         <block type="interaction_name"></block>
@@ -1545,7 +1545,7 @@ export default (Blockly, value) => {
         <block type="slash_edit"></block>
         <block type="send_m_embed_string"></block>
         </category>
-				        <category name="context menu" colour="#f0f255">
+				        <category name="Context menu" colour="#f0f255">
         <label text="Event" web-class="boldtext"></label>
         <block type="on_menu"></block>
         <label text="Stuff" web-class="boldtext"></label>
@@ -1560,7 +1560,7 @@ export default (Blockly, value) => {
         <label text="send embed" web-class="boldtext"></label>
         <block type="send_m_embed_string"></block>
         </category>
-				<category name="button" colour="#ff0019">
+				<category name="Button" colour="#ff0019">
         <label text="%{BKY_T_EDI}"></label>
         <block type="on_button"></block>
         <label text="%{BKY_T_BS}"></label>
@@ -1598,7 +1598,7 @@ export default (Blockly, value) => {
                 </value>
             </block>
         </category>
-        <category name="embed" colour="#40BF4A">
+        <category name="Embed" colour="#40BF4A">
         <label text="Create A Perfect Embed" web-class="boldtext"></label>
             <block type="s4d_m_create_embed_then"></block>
             <label text="%{BKY_COLOR_MESSAGE}"></label>
@@ -1618,7 +1618,7 @@ export default (Blockly, value) => {
             <block type="send_m_embed_string"/>
             <block type="s4d_m_create_embed_then_send"></block>
     </category>
-		        <category name="edited" colour="#e85a66">
+		        <category name="Edited" colour="#e85a66">
         <label text="%{BKY_T_EDI}" web-class="boldtext"></label>
         <block type="when_message_is_edited"></block>
         <block type="s4d_replys"></block>
