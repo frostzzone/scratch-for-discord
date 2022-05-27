@@ -89,7 +89,7 @@ const blockData = {
         }
     ],
     "output": "Number",
-    "colour": "#5ba58b",
+    "colour": "#D14081",
     "tooltip": "",
     "helpUrl": ""
 };

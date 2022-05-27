@@ -528,6 +528,8 @@ if (allow_toolbox_search) {
             <block type="s4d_string_to_number"></block>
 	    <block type="is_a_number_or_string"></block>
         <block type="jg_object_getvalue"/>
+        <block type="frost_current"/>
+        <block type="frost_json_to_string"/>
         <block type="anti_link"/>
         </category>
        
@@ -652,18 +654,7 @@ if (allow_toolbox_search) {
         <category name="mod" colour="#ff0880">
         <block type="ahq-mod"/>
         </category>
-        <category name="Convert API" colour="#3333ff">
-        <label text="API starter" web-class="boldtext"></label>
-        <block type="convert_api_code"/>
-        <label text="Resources" web-class="boldtext"></label>
-        <block type="convert_button"/>
-        <block type="convert_embed"/>
-        <label text="Main blocks" web-class="boldtext"></label>
-        <block type="convert_api_task"/>
-        <block type="save_api_code"/>
-        <block type="convert_api_file"/>
-        <block type="send_ahq_converted"/>
-        </category>
+        
         <category name="Voice" colour="#000099">
         <block type="voice_event"/>
         <block type="voice_switch"/>
@@ -676,10 +667,8 @@ if (allow_toolbox_search) {
         </category>
         </category>
 
-        <category name="henpokpok" colour="#64C9FF">
-          <category name="Timeout" colour="#FF6464">
-          <block type="mute_ahq"/>
-          </category>
+        <!--<category name="henpokpok" colour="#64C9FF">
+          
         <category name="Reactions" colour="#FF6464">
         <label text="Reations event (under construction)" web-class="boldtext"></label>
         <block type="reaction_added"/>
@@ -689,19 +678,15 @@ if (allow_toolbox_search) {
         <block type="react_emoji"/>
         <block type="react_messageId"/>
         </category>
-        </category>
+        </category>-->
 	
 	<category name="AlexCdDg" colour="#06cfaa">
         
-        <category name="TTS" colour="#1010b5">
+        <!--<category name="TTS" colour="#1010b5">
         <label text="Connect and use TTS" web-class="boldtext"></label>
         <block type="tts-test"/>
 	<block type="tts_channel"/>
-        </category>
-	<category name="Image Finder" colour="#00c7ad">
-        <block type="get_image"/>
-	<block type="url_image"/>
-        </category>
+        </category>-->
 	<category name="Typing" colour="#f79400">
         <label text="Typing event" web-class="boldtext"></label>
         <block type="typing_start"/>
@@ -743,17 +728,7 @@ if (allow_toolbox_search) {
  	</category>
 
 <category name="frostzzone" colour="#347dfa">
-<category name="Scratch and Github" colour="#1f1f1f">
-<label text="Github" web-class="boldtext"></label>
-<block type="github_get_then"/>
-<label text="For profile" web-class="boldtext"></label>
-<block type="github_what_stat"/>
-<label text="" web-class="boldtext"></label>
-<label text="" web-class="boldtext"></label>
-<label text="Scratch" web-class="boldtext"></label>
-<block type="scratch_get_about_then"/>
-<block type="scratch_about_user"/>
-</category>
+
 
 <category name="Useless" colour="#2a46fa" hidden="true"><!-- LINE HIDDEN FROM SEARCH -->
 <block type="frost_image"/><!-- LINE HIDDEN FROM SEARCH -->
@@ -936,18 +911,9 @@ if (allow_toolbox_search) {
 <label text="ㅤ" web-class="boldtext"></label>
 </category>
 
-<category name="filesystem (fs)" colour="#347dfa">
-<block type="frost_fs_read"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
-<block type="frost_fs_append"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
-<block type="frost_fs_write"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
-<block type="frost_fs_rename"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
-<block type="frost_fs_delete"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
-<label text="For open and read (Returns the contents of the file)"></label>
-<block type="frost_fs_data"/>
-<label text="For if you get an error (is a boolean and string)"></label>
-<block type="frost_fs_err"/>
-<label text="ㅤ" web-class="boldtext"></label>
-</category>
+<!--<category name="filesystem (fs)" colour="#347dfa">
+
+</category>-->
 
 <category name="Emoji" colour="#347dfa" hidden="false">
 <label text="Welcome to emojis"></label>
@@ -969,11 +935,9 @@ if (allow_toolbox_search) {
 <block type="emit_event"><value name="NAME"><shadow type="text"><field name="TEXT">Hey</field></shadow></value></block>
 </category>
 
-<category name="Other" colour="#5ba58b">
+<!--<category name="Other" colour="#5ba58b">
 <block type="frost_fs_err"/>
-<block type="frost_current"/>
-<block type="frost_json_to_string"/>
-</category>
+</category>-->
 
 <category name="Translate" hidden="true">
 <block name="frost_translate"/>
@@ -1217,84 +1181,11 @@ if (allow_toolbox_search) {
                 </value>
             </block>
             </category>
-            <category name="Image Editing" colour="260">
-            <label text="Getting started" web-class="boldtext"></label>
-            <block type="jg_beginJimp"/>
-            <block type="jg_saveJimpageAs"/>
-            <label text="Effects and extras" web-class="boldtext"></label>
+            
+            
+
 
             
-            <block type="jg_jimp_drawtext"/><!--
-            <block type="jg_jimp_U2_drawtext"/>
-            -->
-
-            <block type="jg_jimp_brightnesscontrast"/>
-            <block type="jg_jimp_basicE"/>
-            <block type="jg_jimp_tpixels"/>
-            <block type="jg_jimp_opacity"/>
-            <block type="jg_jimp_width"/>
-            <block type="jg_jimp_height"/>
-            <block type="jg_jimp_resize"/>
-            <block type="jg_jimp_resizeMethods"/>
-            <block type="jg_jimp_scale"/>
-            <block type="jg_jimp_crop"/>
-            <block type="jg_jimp_flip"/>
-            <block type="jg_jimp_rotate"/>
-            <block type="jg_jimp_blit"/>
-            <block type="jg_jimp_composite"/>
-            <block type="jg_jimp_mask"/>
-            <block type="jg_jimp_pixelate">
-<value name="X">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-<value name="Y">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-<value name="Width">
-      <block type="jg_jimp_width"/>
-    </value>
-<value name="Height">
-      <block type="jg_jimp_height"/>
-    </value>
-            </block>
-            <block type="jg_jimp_qblur"/>
-            <block type="jg_jimp_sblur"/>
-            <block type="jg_jimp_poster"/>
-            <block type="jg_jimp_jpgqual"/>
-            <block type="jg_jimp_convolute"/>
-            <block type="jg_jimp_kernels"/>
-            <block type="jg_jimp_setpixel"/>
-            <block type="jg_jimp_getpixel"/>
-            </category>
-            <category name="File Editing" colour="45">
-            <block type="jg_file_create"/>
-            <block type="jg_file_contents"/>
-            <block type="jg_file_extension"/>
-            <block type="jg_file_metadata"/>
-            <block type="jg_file_foreachfile"/>
-            <block type="jg_file_foreachfileinput"/>
-            </category>
-
-
-            <category name="Data Blocks" colour="230">
-            <block type="jg_imghttps"/>
-            <block type="jg_web_currentdata"/>
-            <block type="jg_web_valueofkey"/>
-						<block type="jg_web_keywithvalue"/>
-            <block type="jg_web_valueofflkey"/>
-            <block type="jg_web_haskey"/>
-            <block type="jg_web_allkey"/>
-						<block type="jg_web_allval"/>
-            <block type="jg_web_keycount"/>
-            <block type="jg_web_keynumber"/>
-<label text="Loops" web-class="boldtext"></label>
-            <block type="jg_web_foreachkey"/>
-            <block type="jg_web_foreachkeyinput"/>
-            </category>
 
 
 <!--
@@ -1387,9 +1278,6 @@ if (allow_toolbox_search) {
                     <block type="filled_bar"/>
                     <block type="split_bar"/>
                 </category>
-                <category name="firebase" colour="#eded5a">
-                    <block type="start_db"/>
-                </category> 
                 <category name="voice channel" colour="#bced5a">
                     <block type="mute_member"/>
                     <block type="unmute_member"/>
@@ -1523,11 +1411,7 @@ if (allow_toolbox_search) {
                         </category>
                     </category>
                 </category>
-                <category name="YoutubeNotifier" colour="#8b5aed">
-                    <block type="video_raw"/>
-                    <block type="on_newvideo"/>
-                    <block type="add_channel"/>
-                </category>
+                
                 <category name="{{ DISCORDBACKUP }}" colour="#bc5aed">
                     <block type="s4d_create_backup_of_guild_then"/>
                     <block type="s4d_backup_load"/>
@@ -1863,99 +1747,7 @@ if (allow_toolbox_search) {
         <block type="s4d_newmsg_del"></block>
         <block type="newmsg_timestamp"></block>
         </category>
-				<category name="Mongo" colour="#0db550">
-        <label text="connect to MongoDB"></label>
-        <block type="mongo_on"></block>
-        <block type="mongo_connect">
-        <value name="URL">
-        <shadow type="text">
-            <field name="TEXT">mongodb url</field>
-        </shadow>
-    </value>
-        </block>
-        <label text="nerd blocks"></label>
-        <block type="mongo_get_data">
-            <value name="KEY">
-                <shadow type="text">
-                    <field name="TEXT">hello</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="mongo_has_data">
-            <value name="KEY">
-                <shadow type="text">
-                    <field name="TEXT">hello</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="mongo_set_data">
-            <value name="KEY">
-                <shadow type="text">
-                    <field name="TEXT">hello</field>
-                </shadow>
-            </value>
-            <value name="VALUE">
-                <shadow type="text">
-                    <field name="TEXT">world</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="mongo_push_data">
-        <value name="KEY">
-            <shadow type="text">
-                <field name="TEXT">hello</field>
-            </shadow>
-        </value>
-        <value name="VALUE">
-            <shadow type="text">
-                <field name="TEXT">world</field>
-            </shadow>
-        </value>
-    </block>
-    <block type="mongo_pull_data">
-    <value name="KEY">
-        <shadow type="text">
-            <field name="TEXT">hello</field>
-        </shadow>
-    </value>
-    <value name="VALUE">
-        <shadow type="text">
-            <field name="TEXT">world</field>
-        </shadow>
-    </value>
-</block>
-        <block type="mongo_delete_data">
-            <value name="KEY">
-                <shadow type="text">
-                    <field name="TEXT">hello</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="mongo_add_data">
-            <value name="COUNT">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="KEY">
-                <shadow type="text">
-                    <field name="TEXT">points</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="mongo_subtract_data">
-            <value name="COUNT">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="KEY">
-                <shadow type="text">
-                    <field name="TEXT">points</field>
-                </shadow>
-            </value>
-        </block>
-</category>
+				
 </category>
 		</category>
         <sep class="bt"/>
@@ -2356,9 +2148,45 @@ if (allow_toolbox_search) {
             <label text="%{BKY_FORMS}"></label>
             <block type="s4d_send_wait_reply_dm"></block>
             <block type="s4d_send_wait_reply_dm_value"></block>
+          <block type="mute_ahq"/>
           <label text="ㅤ" web-class="boldtext"></label>
         </category>
         <sep class="bt"/>
+
+
+<category name="Internet" colour="#4ca3ff">
+    <category name="Websites" colour="#4cb7ff">
+        <category name="Scratch" colour="#ff9d00">
+            <label text="Scratch" web-class="boldtext"></label>
+            <block type="scratch_get_about_then"/>
+            <block type="scratch_about_user"/>
+            <label text="" web-class="boldtext"></label>
+        </category>
+        <category name="Github" colour="#111111">
+            <label text="Github" web-class="boldtext"></label>
+            <block type="github_get_then"/>
+            <label text="For profile" web-class="boldtext"></label>
+            <block type="github_what_stat"/>
+            <label text="" web-class="boldtext"></label>
+        </category>
+        <category name="CloudConvert" colour="#cd4b49">
+        <label text="API starter" web-class="boldtext"></label>
+        <block type="convert_api_code"/>
+        <label text="Resources" web-class="boldtext"></label>
+        <block type="convert_button"/>
+        <block type="convert_embed"/>
+        <label text="Main blocks" web-class="boldtext"></label>
+        <block type="convert_api_task"/>
+        <block type="save_api_code"/>
+        <block type="convert_api_file"/>
+        <block type="send_ahq_converted"/>
+        </category>
+        <category name="Youtube" colour="#ff0000">
+                    <block type="video_raw"/>
+                    <block type="on_newvideo"/>
+                    <block type="add_channel"/>
+                </category>
+    </category>
     <category name="Web Requests" colour="#4C97FF">
         <category name="Simple" colour="#4c8bff">
             <block type="s4d_http_get_then"/>
@@ -2444,8 +2272,111 @@ if (allow_toolbox_search) {
             <block type="jg_web_request_advanced_response_data"/>
         </category>
     </category>
+</category>
+
+
+
+    <category name="Files" colour="#ffae00">
+        <category name="Normal Files" colour="45">
+            <block type="jg_file_create"/>
+            <block type="jg_file_contents"/>
+            <block type="jg_file_extension"/>
+            <block type="jg_file_metadata"/>
+            <block type="jg_file_foreachfile"/>
+            <block type="jg_file_foreachfileinput"/>
+            <label text="ㅤ" web-class="boldtext"></label>
+            <block type="frost_fs_read"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
+<block type="frost_fs_append"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
+<block type="frost_fs_write"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
+<block type="frost_fs_rename"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
+<block type="frost_fs_delete"><statement name="THEN"><block type="controls_if"><value name="IF0"><block type="frost_fs_err"></block></value><statement name="DO0"><block type="s4d_print"><value name="PRINT"><block type="frost_fs_err"></block></value></block></statement></block></statement></block>
+<label text="For open and read (Returns the contents of the file)"></label>
+<block type="frost_fs_data"/>
+<label text="For if you get an error (is a boolean and string)"></label>
+<block type="frost_fs_err"/>
+<label text="ㅤ" web-class="boldtext"></label>
+        </category>
+    <category name="Files with Data" colour="230">
+    <block type="jg_imghttps"/>
+    <block type="jg_web_currentdata"/>
+    <block type="jg_web_valueofkey"/>
+                <block type="jg_web_keywithvalue"/>
+    <block type="jg_web_valueofflkey"/>
+    <block type="jg_web_haskey"/>
+    <block type="jg_web_allkey"/>
+                <block type="jg_web_allval"/>
+    <block type="jg_web_keycount"/>
+    <block type="jg_web_keynumber"/>
+<label text="Loops" web-class="boldtext"></label>
+    <block type="jg_web_foreachkey"/>
+    <block type="jg_web_foreachkeyinput"/>
+    </category>
+	<category name="Images" colour="#46adc2">
+        <category name="Find Images" colour="#00c7ad">
+            <block type="get_image"/>
+	        <block type="url_image"/>
+        </category>
+        <category name="Image Editing" colour="260">
+            <label text="Getting started" web-class="boldtext"></label>
+            <block type="jg_beginJimp"/>
+            <block type="jg_saveJimpageAs"/>
+            <label text="Effects and extras" web-class="boldtext"></label>
+
+            
+            <block type="jg_jimp_drawtext"/><!--
+            <block type="jg_jimp_U2_drawtext"/>
+            -->
+
+            <block type="jg_jimp_brightnesscontrast"/>
+            <block type="jg_jimp_basicE"/>
+            <block type="jg_jimp_tpixels"/>
+            <block type="jg_jimp_opacity"/>
+            <block type="jg_jimp_width"/>
+            <block type="jg_jimp_height"/>
+            <block type="jg_jimp_resize"/>
+            <block type="jg_jimp_resizeMethods"/>
+            <block type="jg_jimp_scale"/>
+            <block type="jg_jimp_crop"/>
+            <block type="jg_jimp_flip"/>
+            <block type="jg_jimp_rotate"/>
+            <block type="jg_jimp_blit"/>
+            <block type="jg_jimp_composite"/>
+            <block type="jg_jimp_mask"/>
+            <block type="jg_jimp_pixelate">
+<value name="X">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+<value name="Y">
+      <block type="math_number">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+<value name="Width">
+      <block type="jg_jimp_width"/>
+    </value>
+<value name="Height">
+      <block type="jg_jimp_height"/>
+    </value>
+            </block>
+            <block type="jg_jimp_qblur"/>
+            <block type="jg_jimp_sblur"/>
+            <block type="jg_jimp_poster"/>
+            <block type="jg_jimp_jpgqual"/>
+            <block type="jg_jimp_convolute"/>
+            <block type="jg_jimp_kernels"/>
+            <block type="jg_jimp_setpixel"/>
+            <block type="jg_jimp_getpixel"/>
+            </category>
+    </category>
+
+    </category>
+
+
         <sep class="bt"/>
-        <category name="{{ TOOLBOX_DATABASE }}" colour="#FF0000">
+    <category name="Databases" colour="#38c786">
+        <category name="Basic" colour="#38c77b">
             <label text="%{BKY_LABEL_READ_DB}"></label>
             <block type="s4d_get_data">
                 <value name="KEY">
@@ -2509,7 +2440,7 @@ if (allow_toolbox_search) {
             <block type="s4d_delete_all_data"/>
             <label text="ㅤ" web-class="boldtext"></label>
         </category>
-	        <category name="Dootabase" colour="#FF0000">
+	        <category name="Advanced" colour="#38c767">
             <label text="%{BKY_LABEL_READ_DB}"></label>
 <block type="s4d_set_db2">
 <value name="KEY">
@@ -2604,6 +2535,104 @@ if (allow_toolbox_search) {
             <block type="s4d_delete_all_data2"/>
             <label text="ㅤ" web-class="boldtext"></label>
         </category>
+        <category name="MongoDB" colour="#0db550">
+        <label text="connect to MongoDB"></label>
+        <block type="mongo_on"></block>
+        <block type="mongo_connect">
+        <value name="URL">
+        <shadow type="text">
+            <field name="TEXT">mongodb url</field>
+        </shadow>
+    </value>
+        </block>
+        <label text="nerd blocks"></label>
+        <block type="mongo_get_data">
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mongo_has_data">
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mongo_set_data">
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+            </value>
+            <value name="VALUE">
+                <shadow type="text">
+                    <field name="TEXT">world</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mongo_push_data">
+        <value name="KEY">
+            <shadow type="text">
+                <field name="TEXT">hello</field>
+            </shadow>
+        </value>
+        <value name="VALUE">
+            <shadow type="text">
+                <field name="TEXT">world</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="mongo_pull_data">
+    <value name="KEY">
+        <shadow type="text">
+            <field name="TEXT">hello</field>
+        </shadow>
+    </value>
+    <value name="VALUE">
+        <shadow type="text">
+            <field name="TEXT">world</field>
+        </shadow>
+    </value>
+</block>
+        <block type="mongo_delete_data">
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT">hello</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mongo_add_data">
+            <value name="COUNT">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT">points</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="mongo_subtract_data">
+            <value name="COUNT">
+                <shadow type="math_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="KEY">
+                <shadow type="text">
+                    <field name="TEXT">points</field>
+                </shadow>
+            </value>
+        </block>
+</category>
+
+<category name="Firebase (WIP)" colour="#1b4a25">
+    <block type="start_db"/>
+</category> 
+    </category>
 
         
 
