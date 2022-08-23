@@ -31,3 +31,6 @@ import "./deletesticker";
 import "./stickerexist";
 import "./sendsticker";
 import "./stickerinfo";
+import "./stickeramount";
+import "./editsticker";
+import "./messagesticker";
