@@ -2732,6 +2732,9 @@ export default (Blockly, value, searching) => {
         <block type="sticker_exist"/> 
         <block type="send_sticker"/> 
         <block type="info_of_sticker"/> 
+	<block type="edit_sticker"/> 
+        <block type="amount_of_stickers"/> 
+        <block type="sticker_on_message"/> 
         </category>
 	
         <category name="Invites" colour="#5abced">
