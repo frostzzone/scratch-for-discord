@@ -1,7 +1,7 @@
 import * as Blockly from "blockly/core";
 import BaseBlockly from "blockly";
 
-import { registerRestrictions } from "../../restrictions";
+import { registerRestrictions } from "../../../restrictions";
 
 
 const blockName = "s4d_edit_webhook";
