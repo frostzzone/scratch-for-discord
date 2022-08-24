@@ -1,82 +1,120 @@
-//jimp.write('edited.jpg');
 import * as Blockly from "blockly/core";
+import BaseBlockly from "blockly";
+
 import { registerRestrictions } from "../../restrictions";
 
+
 const blockName = "jg_button_sendImageMSG";
+const BORDER_FIELDS = ["NAME", "MESSAGE", "ROW", "CHANNEL"];
+const BORDER_TYPES = [[ "Number", "String", "var", "Env", "Array", "List", "Attachment"], [ "String", "var", "Env", "Number", "Embed", "MessageEmbed" ], [ "String", "var", "Env" ], "Channel"];
+const names = ["file", "and message ", "with button row", "to channel"];
+const amountOfInputs = names.length
+const menuName = 'idk'
+
 
 const blockData = {
-    "message0": "Send file %1 and message %3 with button row %4 to channel %2",
+    "message0": "Send",
     "inputsInline": true,
-    "args0": [
-        {
-            "type": "input_value",
-            "name": "NAME",
-            "check": [ "Number", "String", "var", "Env", "Array", "List", "Attachment"]
-        },
-        {
-            "type": "input_value",
-            "name": "CHANNEL",
-            "check": [ "Channel"]
-        },
-        {
-            "type": "input_value",
-            "name": "MESSAGE",
-            "check": [ "String", "var", "Env", "Number", "Embed", "MessageEmbed" ]
-        },
-        {
-            "type": "input_value",
-            "name": "ROW",
-            "check": [ "String", "var", "Env" ]
-        }
-    ],
-    "colour": 220,
+    "colour": "#4C97FF",
     "previousStatement": null,
     "nextStatement": null,
     "tooltip": "This sends the file with the matching file name, extension, and directory for a file saved in your bot's files. Supports (most) embeds and normal text.",
     "helpUrl": ""
 };
 
-Blockly.Blocks[blockName] = {
-    init: function() {
-        this.jsonInit(blockData);
+
+Blockly.Blocks[menuName] = {
+    init: function () {
+        this.setColour("4C97FF");
+        this.setHelpUrl("");
     }
 };
+Blockly.Blocks[blockName] = {
+    init: function () {
+        this.jsonInit(blockData);
+        this.setMutator(new Blockly.Mutator([]));
+        this.inputs_ = []
+        for (let i = 0; i < amountOfInputs; i++) {
+            this.inputs_.push(false)
+        }
+    },
 
-Blockly.JavaScript[blockName] = function(block) {
-    //embeds: [
-  const fileNameandLocation = Blockly.JavaScript.valueToCode(block, "NAME", Blockly.JavaScript.ORDER_ATOMIC);
-  const fileSendChannel = Blockly.JavaScript.valueToCode(block, "CHANNEL", Blockly.JavaScript.ORDER_ATOMIC);
-  var buttonraw = Blockly.JavaScript.valueToCode(block, "ROW", Blockly.JavaScript.ORDER_ATOMIC);
-  var buttonraw2 = String(buttonraw).replaceAll("\"", "")
-  const row = String(buttonraw2).replaceAll("'", "")
-  var msg = Blockly.JavaScript.valueToCode(block, "MESSAGE", Blockly.JavaScript.ORDER_ATOMIC);
-  var code, embed;
-  var stored = `[${fileNameandLocation}]`
-  if (fileNameandLocation.includes("['") || fileNameandLocation.includes("[\"")) {
-    stored = fileNameandLocation
+
+    mutationToDom: function () {
+        if (!this.inputs_) {
+            return null;
+        }
+        const container = document.createElement("mutation");
+        for (let i = 0; i < this.inputs_.length; i++) {
+            if (this.inputs_[i]) container.setAttribute(BORDER_FIELDS[i], this.inputs_[i])
+        }
+        return container;
+    },
+
+    domToMutation: function (xmlElement) {
+        for (let i = 0; i < this.inputs_.length; i++) {
+            this.inputs_[i] = xmlElement.getAttribute(BORDER_FIELDS[i].toLowerCase()) == "true";
+        }
+        this.updateShape_();
+    },
+
+    decompose: function (workspace) {
+        const containerBlock = workspace.newBlock(menuName);
+        for (let i = 0; i < this.inputs_.length; i++) {
+            BaseBlockly.Msg[BORDER_FIELDS[i]] = names[i];
+            containerBlock.appendDummyInput()
+                .setAlign(Blockly.ALIGN_LEFT)
+                .appendField(new Blockly.FieldCheckbox(this.inputs_[i] ? "TRUE" : "FALSE"), BORDER_FIELDS[i].toUpperCase())
+                .appendField(names[i])
+        }
+        containerBlock.initSvg();
+        return containerBlock;
+    },
+
+    compose: function (containerBlock) {
+        // Set states
+        for (let i = 0; i < this.inputs_.length; i++) {
+            this.inputs_[i] = (containerBlock.getFieldValue(BORDER_FIELDS[i].toUpperCase()) == "TRUE");
+        }
+        this.updateShape_();
+    },
+
+    updateShape_: function () {
+        for (let i = 0; i < this.inputs_.length; i++) {
+            if ((!this.inputs_[i]) && (this.getInput(BORDER_FIELDS[i].toUpperCase()))) this.removeInput(BORDER_FIELDS[i].toUpperCase());
+        }
+        for (let i = 0; i < this.inputs_.length; i++) {
+            if ((this.inputs_[i]) && (!(this.getInput(BORDER_FIELDS[i].toUpperCase())))) {
+                BaseBlockly.Msg[BORDER_FIELDS[i]] = names[i];
+                this.appendValueInput(BORDER_FIELDS[i].toUpperCase())
+                    .setCheck(BORDER_TYPES[i])
+                    .setAlign(Blockly.ALIGN_RIGHT)
+                    .appendField(names[i]);
+            }
+        }
+    }
+
+};
+
+Blockly.JavaScript[blockName] = function (block) {
+const channel = Blockly.JavaScript.valueToCode(block, "CHANNEL", Blockly.JavaScript.ORDER_NONE);  const name = Blockly.JavaScript.valueToCode(block, "NAME", Blockly.JavaScript.ORDER_NONE);
+const message = Blockly.JavaScript.valueToCode(block, "MESSAGE", Blockly.JavaScript.ORDER_NONE);
+const row = Blockly.JavaScript.valueToCode(block, "ROW", Blockly.JavaScript.ORDER_NONE);
+
+var code = `await ${channel}.send({`
+  
+    if(name) {
+      code += `files: [${name}],`
+    }
+  if(message) {
+    code += ` content: ${message},`
   }
-  if (msg.includes("embeds: [")) {
-    embed = true
-  } else {
-    embed = false
+  if(row){
+code += `components: [${channel}]`
   }
-  if (embed) {
-    code = `await ${fileSendChannel}.send({
-        files: ${stored},
-        components: [${row}]
-        ${msg}
-     });
-   `;
-  } else {
-    code = `await ${fileSendChannel}.send({
-        files: ${stored},
-        components: [${row}]
-        content: String(${msg})
-     });
-   `;
-  }
-  return code;
-}
+  var finalcode = `${code}}); \n`
+    return finalcode;
+};
 
 registerRestrictions(blockName, [
     {
